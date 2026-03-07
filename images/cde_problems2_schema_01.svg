@@ -1,0 +1,43 @@
+<svg width="350" height="250" viewBox="0 0 350 250" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 50 200 L 300 200" stroke="black" fill="none" />
+  <path d="M 150 250 L 150 50" stroke="black" fill="none" />
+  <path d="M 50 180 C 130 180 150 200 160 200 C 180 200 200 150 220 50" stroke="black" fill="none" />
+  
+  <text x="310" y="210" font-family="Arial" font-size="12">V<sub>D</sub> (V)</text>
+  <text x="160" y="40" font-family="Arial" font-size="12">I<sub>D</sub>(mA)</text>
+
+  <!-- axa Y -->
+  <line x1="145" y1="150" x2="155" y2="150" stroke="black" />
+  <text x="120" y="155" font-family="Arial" font-size="10">10</text>
+  <line x1="145" y1="100" x2="155" y2="100" stroke="black" />
+  <text x="120" y="105" font-family="Arial" font-size="10">20</text>
+  <line x1="145" y1="50" x2="155" y2="50" stroke="black" />
+  <text x="120" y="55" font-family="Arial" font-size="10">30</text>
+  
+  <line x1="145" y1="180" x2="155" y2="180" stroke="black" />
+  <text x="120" y="185" font-family="Arial" font-size="10">2</text>
+  
+  <circle cx="150" cy="180" r="2" fill="black"/>
+
+  <!-- axa X -->
+  <line x1="200" y1="195" x2="200" y2="205" stroke="black" />
+  <text x="190" y="220" font-family="Arial" font-size="10">0.5</text>
+  <line x1="220" y1="195" x2="220" y2="205" stroke="black" />
+  <text x="210" y="220" font-family="Arial" font-size="10">0.8</text>
+  <line x1="80" y1="195" x2="80" y2="205" stroke="black" />
+  <text x="70" y="180" font-family="Arial" font-size="10">-10 V</text>
+
+  <circle cx="80" cy="200" r="2" fill="black"/>
+  <circle cx="150" cy="200" r="2" fill="black"/>
+  <circle cx="200" cy="180" r="2" fill="black"/>
+  <circle cx="220" cy="100" r="2" fill="black"/>
+
+  <text x="155" y="215" font-family="Arial" font-size="10">0</text>
+  <text x="165" y="225" font-family="Arial" font-size="10">1 &#956;A</text>
+  
+  <line x1="150" y1="100" x2="220" y2="100" stroke="black" stroke-dasharray="4" />
+  <line x1="220" y1="100" x2="220" y2="200" stroke="black" stroke-dasharray="4" />
+  <line x1="150" y1="180" x2="200" y2="180" stroke="black" stroke-dasharray="4" />
+  <line x1="200" y1="180" x2="200" y2="200" stroke="black" stroke-dasharray="4" />
+
+</svg>

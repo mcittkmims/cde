@@ -1,0 +1,56 @@
+<svg width="350" height="150" viewBox="0 0 350 150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sursa E1 -->
+  <line x1="50" y1="50" x2="50" y2="120" stroke="black" />
+  <line x1="40" y1="80" x2="60" y2="80" stroke="black" stroke-width="2"/>
+  <line x1="45" y1="85" x2="55" y2="85" stroke="black" stroke-width="3"/>
+  <text x="30" y="85" font-family="Arial" font-size="10">E1</text>
+  <text x="60" y="75" font-family="Arial" font-size="10">+</text>
+  <text x="60" y="95" font-family="Arial" font-size="10">-</text>
+
+  <!-- Linia superioara spre R1 -->
+  <line x1="50" y1="50" x2="80" y2="50" stroke="black" />
+  
+  <!-- Rezistenta R1 -->
+  <rect x="80" y="45" width="30" height="10" fill="none" stroke="black" />
+  <text x="90" y="40" font-family="Arial" font-size="10">R1</text>
+  
+  <!-- Continuare linie superioara spre Dioda -->
+  <line x1="110" y1="50" x2="150" y2="50" stroke="black" />
+  
+  <!-- Dioda D -->
+  <polygon points="150,45 150,55 160,50" fill="black" />
+  <line x1="160" y1="45" x2="160" y2="55" stroke="black" stroke-width="2"/>
+  <text x="155" y="40" font-family="Arial" font-size="10">D</text>
+
+  <!-- Continuare linie superioara dupa Dioda -->
+  <line x1="160" y1="50" x2="190" y2="50" stroke="black" />
+  
+  <!-- Linia dreapta spre R2 -->
+  <line x1="190" y1="50" x2="190" y2="60" stroke="black" />
+
+  <!-- Rezistenta R2 -->
+  <rect x="185" y="60" width="10" height="30" fill="none" stroke="black" />
+  <text x="170" y="75" font-family="Arial" font-size="10">R2</text>
+  
+  <!-- Linia dreapta spre E2 -->
+  <line x1="190" y1="90" x2="190" y2="100" stroke="black" />
+
+  <!-- Sursa E2 -->
+  <line x1="180" y1="100" x2="200" y2="100" stroke="black" stroke-width="3"/>
+  <line x1="185" y1="105" x2="195" y2="105" stroke="black" stroke-width="2"/>
+  <text x="165" y="105" font-family="Arial" font-size="10">E2</text>
+  <text x="195" y="95" font-family="Arial" font-size="10">-</text>
+  <text x="195" y="115" font-family="Arial" font-size="10">+</text>
+  
+  <!-- Linia dreapta de jos -->
+  <line x1="190" y1="105" x2="190" y2="120" stroke="black" />
+  
+  <!-- Linia inferioara -->
+  <line x1="50" y1="120" x2="190" y2="120" stroke="black" />
+
+  <!-- Tensiunea V -->
+  <line x1="220" y1="50" x2="220" y2="120" stroke="black" />
+  <polygon points="217,115 223,115 220,120" fill="black" />
+  <text x="225" y="85" font-family="Arial" font-size="10">V</text>
+
+</svg>

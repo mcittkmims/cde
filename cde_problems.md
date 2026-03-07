@@ -1,10 +1,4 @@
 
-
-
-Iată extragerea și structurarea tuturor problemelor, schemelor și rezolvărilor din prezentare. Am grupat informațiile pe teme, am transcris cu atenție formulele matematice și am recreat schemele electrice utilizând cod SVG curat, perfect scalabil, direct în acest document.
-
----
-
 # TEMA 1: Recapitulare (Calcule matematice și conversii)
 
 ### Problema 1
@@ -65,71 +59,12 @@ Din această expresie reies parametrii curentului alternativ:
 
 # TEMA 3: Probleme - Circuite Electrice (Legea lui Ohm și Legile lui Kirchhoff)
 
-Pentru a vizualiza corect schemele electrice redate mai jos, asigurați-vă că folosiți o platformă care suportă formatul SVG nativ în Markdown (majoritatea o fac).
+Schemele electrice de mai jos au fost randate ca imagini PNG și sunt legate din folderul `images/`, pentru afișare corectă în Markdown.
 
 ### PROBLEMA 01
 
 **Schema circuitului:**
-<svg width="450" height="230" viewBox="0 0 450 230" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <path id="res" d="M 0 0 L 8 0 L 11 -6 L 17 6 L 23 -6 L 29 6 L 32 0 L 40 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-    <g id="batt">
-      <line x1="0" y1="0" x2="0" y2="15" stroke="currentColor" stroke-width="2"/>
-      <line x1="-15" y1="15" x2="15" y2="15" stroke="currentColor" stroke-width="2"/>
-      <line x1="-8" y1="25" x2="8" y2="25" stroke="currentColor" stroke-width="4"/>
-      <line x1="0" y1="25" x2="0" y2="40" stroke="currentColor" stroke-width="2"/>
-    </g>
-    <g id="ammeter">
-      <circle cx="20" cy="0" r="14" fill="none" stroke="currentColor" stroke-width="2"/>
-      <text x="20" y="5" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="currentColor">A</text>
-      <line x1="0" y1="0" x2="6" y2="0" stroke="currentColor" stroke-width="2"/>
-      <line x1="34" y1="0" x2="40" y2="0" stroke="currentColor" stroke-width="2"/>
-    </g>
-    <g id="gnd">
-      <line x1="0" y1="0" x2="0" y2="15" stroke="currentColor" stroke-width="2"/>
-      <line x1="-12" y1="15" x2="12" y2="15" stroke="currentColor" stroke-width="2"/>
-      <line x1="-8" y1="20" x2="8" y2="20" stroke="currentColor" stroke-width="2"/>
-      <line x1="-4" y1="25" x2="4" y2="25" stroke="currentColor" stroke-width="2"/>
-    </g>
-  </defs>
-  
-  <use href="#batt" x="50" y="80"/>
-  <text x="15" y="105" font-family="sans-serif" font-size="12" fill="currentColor">V1=12V</text>
-  <line x1="50" y1="80" x2="50" y2="50" stroke="currentColor" stroke-width="2"/>
-  <line x1="50" y1="50" x2="100" y2="50" stroke="currentColor" stroke-width="2"/>
-  
-  <use href="#res" x="100" y="50"/>
-  <text x="105" y="40" font-family="sans-serif" font-size="12" fill="currentColor">R1=10Ω</text>
-  
-  <line x1="140" y1="50" x2="180" y2="50" stroke="currentColor" stroke-width="2"/>
-  <use href="#res" x="180" y="50"/>
-  <text x="185" y="40" font-family="sans-serif" font-size="12" fill="currentColor">R2=20Ω</text>
-  <line x1="220" y1="50" x2="250" y2="50" stroke="currentColor" stroke-width="2"/>
-  
-  <line x1="250" y1="30" x2="250" y2="70" stroke="currentColor" stroke-width="2"/>
-  <line x1="250" y1="30" x2="270" y2="30" stroke="currentColor" stroke-width="2"/>
-  <line x1="250" y1="70" x2="270" y2="70" stroke="currentColor" stroke-width="2"/>
-  
-  <use href="#res" x="270" y="30"/>
-  <text x="275" y="20" font-family="sans-serif" font-size="12" fill="currentColor">R3=20Ω</text>
-  <use href="#res" x="270" y="70"/>
-  <text x="275" y="95" font-family="sans-serif" font-size="12" fill="currentColor">R4=20Ω</text>
-  
-  <line x1="310" y1="30" x2="330" y2="30" stroke="currentColor" stroke-width="2"/>
-  <line x1="310" y1="70" x2="330" y2="70" stroke="currentColor" stroke-width="2"/>
-  <line x1="330" y1="30" x2="330" y2="70" stroke="currentColor" stroke-width="2"/>
-  <line x1="330" y1="50" x2="380" y2="50" stroke="currentColor" stroke-width="2"/>
-  
-  <line x1="380" y1="50" x2="380" y2="170" stroke="currentColor" stroke-width="2"/>
-  <line x1="380" y1="170" x2="250" y2="170" stroke="currentColor" stroke-width="2"/>
-  
-  <use href="#ammeter" x="210" y="170"/>
-  <text x="200" y="200" font-family="sans-serif" font-size="12" fill="currentColor">Ampermetru</text>
-  
-  <line x1="210" y1="170" x2="50" y2="170" stroke="currentColor" stroke-width="2"/>
-  <use href="#gnd" x="140" y="170"/>
-  <line x1="50" y1="170" x2="50" y2="120" stroke="currentColor" stroke-width="2"/>
-</svg>
+![Schema circuitului - Problema 1](images/problema_01.png)
 
 **Date:**
 $R_1 = 10\ \Omega$, $R_2 = 20\ \Omega$, $R_3 = 20\ \Omega$, $R_4 = 20\ \Omega$, $V_1 = 12\ V$
@@ -152,49 +87,7 @@ $I = 0,3\ A$
 ### PROBLEMA 02
 
 **Schema circuitului:**
-<svg width="450" height="230" viewBox="0 0 450 230" xmlns="http://www.w3.org/2000/svg">
-  <use href="#batt" x="50" y="90"/>
-  <text x="15" y="115" font-family="sans-serif" font-size="12" fill="currentColor">V1=15V</text>
-  <line x1="50" y1="90" x2="50" y2="50" stroke="currentColor" stroke-width="2"/>
-  <line x1="50" y1="50" x2="80" y2="50" stroke="currentColor" stroke-width="2"/>
-  
-  <line x1="80" y1="30" x2="80" y2="70" stroke="currentColor" stroke-width="2"/>
-  <line x1="80" y1="30" x2="100" y2="30" stroke="currentColor" stroke-width="2"/>
-  <use href="#res" x="100" y="30"/>
-  <text x="105" y="20" font-family="sans-serif" font-size="12" fill="currentColor">R1=10Ω</text>
-  <line x1="80" y1="70" x2="100" y2="70" stroke="currentColor" stroke-width="2"/>
-  <use href="#res" x="100" y="70"/>
-  <text x="105" y="95" font-family="sans-serif" font-size="12" fill="currentColor">R5=10Ω</text>
-  
-  <line x1="140" y1="30" x2="160" y2="30" stroke="currentColor" stroke-width="2"/>
-  <line x1="140" y1="70" x2="160" y2="70" stroke="currentColor" stroke-width="2"/>
-  <line x1="160" y1="30" x2="160" y2="70" stroke="currentColor" stroke-width="2"/>
-  
-  <line x1="160" y1="50" x2="180" y2="50" stroke="currentColor" stroke-width="2"/>
-  <use href="#res" x="180" y="50"/>
-  <text x="185" y="40" font-family="sans-serif" font-size="12" fill="currentColor">R2=12Ω</text>
-  <line x1="220" y1="50" x2="240" y2="50" stroke="currentColor" stroke-width="2"/>
-  
-  <line x1="240" y1="30" x2="240" y2="70" stroke="currentColor" stroke-width="2"/>
-  <line x1="240" y1="30" x2="260" y2="30" stroke="currentColor" stroke-width="2"/>
-  <use href="#res" x="260" y="30"/>
-  <text x="265" y="20" font-family="sans-serif" font-size="12" fill="currentColor">R3=40Ω</text>
-  <line x1="240" y1="70" x2="260" y2="70" stroke="currentColor" stroke-width="2"/>
-  <use href="#res" x="260" y="70"/>
-  <text x="265" y="95" font-family="sans-serif" font-size="12" fill="currentColor">R4=10Ω</text>
-  
-  <line x1="300" y1="30" x2="320" y2="30" stroke="currentColor" stroke-width="2"/>
-  <line x1="300" y1="70" x2="320" y2="70" stroke="currentColor" stroke-width="2"/>
-  <line x1="320" y1="30" x2="320" y2="70" stroke="currentColor" stroke-width="2"/>
-  <line x1="320" y1="50" x2="370" y2="50" stroke="currentColor" stroke-width="2"/>
-  
-  <line x1="370" y1="50" x2="370" y2="170" stroke="currentColor" stroke-width="2"/>
-  <line x1="370" y1="170" x2="260" y2="170" stroke="currentColor" stroke-width="2"/>
-  <use href="#ammeter" x="220" y="170"/>
-  <line x1="220" y1="170" x2="50" y2="170" stroke="currentColor" stroke-width="2"/>
-  <use href="#gnd" x="150" y="170"/>
-  <line x1="50" y1="170" x2="50" y2="130" stroke="currentColor" stroke-width="2"/>
-</svg>
+![Schema circuitului - Problema 2](images/problema_02.png)
 
 **Date:**
 $R_1 = 10\ \Omega$, $R_2 = 12\ \Omega$, $R_3 = 40\ \Omega$, $R_4 = 10\ \Omega$, $R_5 = 10\ \Omega$, $V_1 = 15\ V$
@@ -217,64 +110,7 @@ $I = 0,6\ A$
 ### PROBLEMA 03
 
 **Schema circuitului:**
-<svg width="450" height="250" viewBox="0 0 450 250" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <g id="voltmeter">
-      <circle cx="20" cy="0" r="14" fill="none" stroke="currentColor" stroke-width="2"/>
-      <text x="20" y="5" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="currentColor">V</text>
-      <line x1="0" y1="0" x2="6" y2="0" stroke="currentColor" stroke-width="2"/>
-      <line x1="34" y1="0" x2="40" y2="0" stroke="currentColor" stroke-width="2"/>
-    </g>
-  </defs>
-  <use href="#batt" x="50" y="110"/>
-  <text x="15" y="135" font-family="sans-serif" font-size="12" fill="currentColor">V1=16V</text>
-  <line x1="50" y1="110" x2="50" y2="70" stroke="currentColor" stroke-width="2"/>
-  <line x1="50" y1="70" x2="80" y2="70" stroke="currentColor" stroke-width="2"/>
-  
-  <line x1="80" y1="40" x2="80" y2="110" stroke="currentColor" stroke-width="2"/>
-  
-  <!-- Ramura superioară (R1) -->
-  <line x1="80" y1="40" x2="100" y2="40" stroke="currentColor" stroke-width="2"/>
-  <use href="#res" x="100" y="40"/>
-  <text x="105" y="30" font-family="sans-serif" font-size="12" fill="currentColor">R1=10Ω</text>
-  <line x1="140" y1="40" x2="160" y2="40" stroke="currentColor" stroke-width="2"/>
-  <use href="#ammeter" x="160" y="40"/>
-  <text x="180" y="25" font-family="sans-serif" font-size="12" fill="currentColor">I1</text>
-  <line x1="200" y1="40" x2="220" y2="40" stroke="currentColor" stroke-width="2"/>
-  
-  <!-- Ramura inferioară (R2) -->
-  <line x1="80" y1="110" x2="100" y2="110" stroke="currentColor" stroke-width="2"/>
-  <use href="#res" x="100" y="110"/>
-  <text x="105" y="135" font-family="sans-serif" font-size="12" fill="currentColor">R2=30Ω</text>
-  <line x1="140" y1="110" x2="160" y2="110" stroke="currentColor" stroke-width="2"/>
-  <use href="#ammeter" x="160" y="110"/>
-  <text x="180" y="135" font-family="sans-serif" font-size="12" fill="currentColor">I2</text>
-  <line x1="200" y1="110" x2="220" y2="110" stroke="currentColor" stroke-width="2"/>
-  
-  <!-- Nodul B și R3 -->
-  <line x1="220" y1="40" x2="220" y2="110" stroke="currentColor" stroke-width="2"/>
-  <text x="210" y="90" font-family="sans-serif" font-size="14" font-weight="bold" fill="currentColor">B</text>
-  <line x1="220" y1="70" x2="250" y2="70" stroke="currentColor" stroke-width="2"/>
-  <use href="#res" x="250" y="70"/>
-  <text x="250" y="95" font-family="sans-serif" font-size="12" fill="currentColor">R3=2.5Ω</text>
-  <line x1="290" y1="70" x2="330" y2="70" stroke="currentColor" stroke-width="2"/>
-  <text x="320" y="90" font-family="sans-serif" font-size="14" font-weight="bold" fill="currentColor">A</text>
-  
-  <!-- Voltmetru U3 (nodul B la A) -->
-  <line x1="230" y1="70" x2="230" y2="20" stroke="currentColor" stroke-width="2"/>
-  <line x1="230" y1="20" x2="250" y2="20" stroke="currentColor" stroke-width="2"/>
-  <use href="#voltmeter" x="250" y="20"/>
-  <line x1="290" y1="20" x2="310" y2="20" stroke="currentColor" stroke-width="2"/>
-  <line x1="310" y1="20" x2="310" y2="70" stroke="currentColor" stroke-width="2"/>
-  
-  <!-- Retur -->
-  <line x1="330" y1="70" x2="330" y2="200" stroke="currentColor" stroke-width="2"/>
-  <line x1="330" y1="200" x2="260" y2="200" stroke="currentColor" stroke-width="2"/>
-  <use href="#ammeter" x="220" y="200"/>
-  <line x1="220" y1="200" x2="50" y2="200" stroke="currentColor" stroke-width="2"/>
-  <use href="#gnd" x="160" y="200"/>
-  <line x1="50" y1="200" x2="50" y2="150" stroke="currentColor" stroke-width="2"/>
-</svg>
+![Schema circuitului - Problema 3](images/problema_03.png)
 
 **Date:**
 $R_1 = 10\ \Omega$, $R_2 = 30\ \Omega$, $R_3 = 2,5\ \Omega$, $V_1 = 16\ V$
@@ -318,39 +154,7 @@ $I_1 = 1,2\ A$, $I_2 = 0,4\ A$, $U_3 = 4\ V$, $I = 1,6\ A$, $R_{12} = 7,5\ \Omeg
 ### PROBLEMA 04
 
 **Schema circuitului:**
-<svg width="450" height="220" viewBox="0 0 450 220" xmlns="http://www.w3.org/2000/svg">
-  <use href="#batt" x="50" y="100"/>
-  <text x="15" y="125" font-family="sans-serif" font-size="12" fill="currentColor">V1=18V</text>
-  <line x1="50" y1="100" x2="50" y2="70" stroke="currentColor" stroke-width="2"/>
-  <line x1="50" y1="70" x2="100" y2="70" stroke="currentColor" stroke-width="2"/>
-  
-  <use href="#res" x="100" y="70"/>
-  <text x="105" y="95" font-family="sans-serif" font-size="12" fill="currentColor">R1=12Ω</text>
-  
-  <line x1="90" y1="70" x2="90" y2="20" stroke="currentColor" stroke-width="2"/>
-  <line x1="90" y1="20" x2="100" y2="20" stroke="currentColor" stroke-width="2"/>
-  <use href="#voltmeter" x="100" y="20"/>
-  <line x1="140" y1="20" x2="150" y2="20" stroke="currentColor" stroke-width="2"/>
-  <line x1="150" y1="20" x2="150" y2="70" stroke="currentColor" stroke-width="2"/>
-  
-  <line x1="140" y1="70" x2="220" y2="70" stroke="currentColor" stroke-width="2"/>
-  <use href="#res" x="220" y="70"/>
-  <text x="225" y="95" font-family="sans-serif" font-size="12" fill="currentColor">R2=36Ω</text>
-  
-  <line x1="210" y1="70" x2="210" y2="20" stroke="currentColor" stroke-width="2"/>
-  <line x1="210" y1="20" x2="220" y2="20" stroke="currentColor" stroke-width="2"/>
-  <use href="#voltmeter" x="220" y="20"/>
-  <line x1="260" y1="20" x2="270" y2="20" stroke="currentColor" stroke-width="2"/>
-  <line x1="270" y1="20" x2="270" y2="70" stroke="currentColor" stroke-width="2"/>
-  
-  <line x1="260" y1="70" x2="330" y2="70" stroke="currentColor" stroke-width="2"/>
-  <line x1="330" y1="70" x2="330" y2="160" stroke="currentColor" stroke-width="2"/>
-  <line x1="330" y1="160" x2="260" y2="160" stroke="currentColor" stroke-width="2"/>
-  <use href="#ammeter" x="220" y="160"/>
-  <line x1="220" y1="160" x2="50" y2="160" stroke="currentColor" stroke-width="2"/>
-  <use href="#gnd" x="150" y="160"/>
-  <line x1="50" y1="160" x2="50" y2="140" stroke="currentColor" stroke-width="2"/>
-</svg>
+![Schema circuitului - Problema 4](images/problema_04.png)
 
 **Date:**
 $R_1 = 12\ \Omega$, $R_2 = 36\ \Omega$, $V_1 = 18\ V$
@@ -382,65 +186,7 @@ $U_1 = 4,5\ V$, $U_2 = 13,5\ V$, $I = 0,375\ A$, $R_E = 48\ \Omega$
 ### PROBLEMA 05 (Circuit Mixt)
 
 **Schema circuitului:**
-<svg width="550" height="300" viewBox="0 0 550 300" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <!-- Ampermetru Vertical -->
-    <g id="ammeter_v">
-      <circle cx="0" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="2"/>
-      <text x="0" y="25" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="currentColor">A</text>
-      <line x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="2"/>
-      <line x1="0" y1="34" x2="0" y2="40" stroke="currentColor" stroke-width="2"/>
-    </g>
-  </defs>
-
-  <use href="#batt" x="50" y="150"/>
-  <text x="15" y="175" font-family="sans-serif" font-size="12" fill="currentColor">V1=12V</text>
-  <line x1="50" y1="150" x2="50" y2="100" stroke="currentColor" stroke-width="2"/>
-  <line x1="50" y1="100" x2="100" y2="100" stroke="currentColor" stroke-width="2"/>
-  
-  <use href="#res" x="100" y="100"/>
-  <text x="105" y="125" font-family="sans-serif" font-size="12" fill="currentColor">R1=7Ω</text>
-  
-  <line x1="90" y1="100" x2="90" y2="60" stroke="currentColor" stroke-width="2"/>
-  <line x1="90" y1="60" x2="100" y2="60" stroke="currentColor" stroke-width="2"/>
-  <use href="#voltmeter" x="100" y="60"/>
-  <line x1="140" y1="60" x2="150" y2="60" stroke="currentColor" stroke-width="2"/>
-  <line x1="150" y1="60" x2="150" y2="100" stroke="currentColor" stroke-width="2"/>
-  
-  <line x1="140" y1="100" x2="180" y2="100" stroke="currentColor" stroke-width="2"/>
-  <line x1="180" y1="60" x2="180" y2="140" stroke="currentColor" stroke-width="2"/>
-  <line x1="180" y1="60" x2="200" y2="60" stroke="currentColor" stroke-width="2"/>
-  <line x1="180" y1="100" x2="200" y2="100" stroke="currentColor" stroke-width="2"/>
-  <line x1="180" y1="140" x2="200" y2="140" stroke="currentColor" stroke-width="2"/>
-  
-  <use href="#res" x="200" y="60"/>
-  <text x="205" y="50" font-family="sans-serif" font-size="12" fill="currentColor">R2=5Ω</text>
-  <use href="#res" x="200" y="100"/>
-  <text x="205" y="90" font-family="sans-serif" font-size="12" fill="currentColor">R3=3Ω</text>
-  <use href="#res" x="200" y="140"/>
-  <text x="205" y="165" font-family="sans-serif" font-size="12" fill="currentColor">R4=6Ω</text>
-  
-  <line x1="240" y1="60" x2="260" y2="60" stroke="currentColor" stroke-width="2"/>
-  <line x1="240" y1="100" x2="260" y2="100" stroke="currentColor" stroke-width="2"/>
-  <line x1="240" y1="140" x2="260" y2="140" stroke="currentColor" stroke-width="2"/>
-  <line x1="260" y1="60" x2="260" y2="140" stroke="currentColor" stroke-width="2"/>
-  
-  <line x1="260" y1="100" x2="280" y2="100" stroke="currentColor" stroke-width="2"/>
-  <use href="#res" x="280" y="100"/>
-  <text x="285" y="125" font-family="sans-serif" font-size="12" fill="currentColor">R5=8Ω</text>
-  <line x1="320" y1="100" x2="380" y2="100" stroke="currentColor" stroke-width="2"/>
-  
-  <line x1="380" y1="100" x2="380" y2="130" stroke="currentColor" stroke-width="2"/>
-  <use href="#ammeter_v" x="380" y="130"/>
-  <line x1="380" y1="170" x2="380" y2="240" stroke="currentColor" stroke-width="2"/>
-  
-  <line x1="380" y1="240" x2="260" y2="240" stroke="currentColor" stroke-width="2"/>
-  <use href="#res" x="220" y="240"/>
-  <text x="225" y="265" font-family="sans-serif" font-size="12" fill="currentColor">R6=9Ω</text>
-  <line x1="220" y1="240" x2="50" y2="240" stroke="currentColor" stroke-width="2"/>
-  <use href="#gnd" x="120" y="240"/>
-  <line x1="50" y1="240" x2="50" y2="190" stroke="currentColor" stroke-width="2"/>
-</svg>
+![Schema circuitului - Problema 5](images/problema_05.png)
 
 **Date:**
 $R_1 = 7\ \Omega$, $R_2 = 5\ \Omega$, $R_3 = 3\ \Omega$, $R_4 = 6\ \Omega$, $R_5 = 8\ \Omega$, $R_6 = 9\ \Omega$, $V_1 = 12\ V$
@@ -463,3 +209,276 @@ Tensiunea pe rezistorul $R_1$:
 $U_1 = R_1 \cdot I = 7 \cdot 0,472 = 3,3\ V$
 
 **Observație:** Rezistența echivalentă a grupării paralel ($R_{234} = 1,428\ \Omega$) este mai mică decât oricare dintre rezistențele componente ($R_2, R_3, R_4$).
+
+---
+
+# TEMA 4: Divizoare de tensiune
+
+## Problema 1: Divizor simplu cu două rezistoare
+
+**Condiția și cerința problemei:**
+Cât de mult curent va circula printr-un rezistor de $20\ \Omega$ conectat în serie cu un rezistor de $40\ \Omega$ când tensiunea de alimentare pe combinația serie este de $12\text{ volți c.c.}$ De asemenea, calculați căderea de tensiune produsă pe fiecare rezistor.
+
+**Schema circuitului:**
+![Schema 1](images/cde_problems1_schema_01.png)
+
+
+**Rezolvare:**
+$$R_T = R_1 + R_2 = 20 + 40 = 60\Omega$$
+
+$$I = \frac{V_S}{R_T} = \frac{12}{60} = 0.2 \text{ [Amps, A] or } 200\text{mA}$$
+
+$$V_{R1} = I \times R_1 = V_S \left( \frac{R_1}{R_1 + R_2} \right) = 12 \left( \frac{20}{20 + 40} \right) = 4\text{ volts}$$
+
+$$V_{R2} = I \times R_2 = V_S \left( \frac{R_2}{R_1 + R_2} \right) = 12 \left( \frac{40}{20 + 40} \right) = 8\text{ volts}$$
+
+***
+
+## Problema 2: Divizor cu trei rezistoare în buclă
+
+**Condiția și cerința problemei:**
+Trei elemente rezistive de $6\text{k}\Omega$, $12\text{k}\Omega$ și $18\text{k}\Omega$ sunt conectate împreună în serie cu o sursă de $36\text{ volți}$. Calculați rezistența totală, valoarea curentului care circulă în circuit și tensiunea ce cade pe fiecare rezistor. 
+Date: $VS = 36\text{ volți}$, $R1 = 6\text{k}\Omega$, $R2 = 12\text{k}\Omega$ și $R3 = 18\text{k}\Omega$.
+
+**Schema circuitului:**
+![Schema 2](images/cde_problems1_schema_02.png)
+
+**Rezolvare:**
+$$R_T = R_1 + R_2 + R_3 = 6k\Omega + 12k\Omega + 18k\Omega = 36k\Omega$$
+
+$$I = \frac{V_S}{R_T} = \frac{36}{36000} = 1\text{mA}$$
+
+$$V_{R1} = V_S \left( \frac{R_1}{R_T} \right) = 36 \left( \frac{6000}{36000} \right) = 6\text{ volts}$$
+
+$$V_{R2} = V_S \left( \frac{R_2}{R_T} \right) = 36 \left( \frac{12000}{36000} \right) = 12\text{ volts}$$
+
+$$V_{R3} = V_S \left( \frac{R_3}{R_T} \right) = 36 \left( \frac{18000}{36000} \right) = 18\text{ volts}$$
+
+***
+
+## Problema 3: Rețea divizoare cu multiple puncte de priză (fără sarcină)
+
+**Condiția și cerința problemei:**
+Considerați o lungă serie de rezistoare conectate la o sursă de tensiune $Vs$. De-a lungul rețelei serie există diferite puncte de priză de tensiuni diferite, A, B, C, D și E. Rezistența totală a seriei poate fi găsită prin simpla adunare a valorilor rezistențelor individuale serie, oferind o rezistență totală în valoare $R_T$ de $15\text{k}\Omega$.
+1. Se calculează ieșirea de tensiune fără sarcină între punctele B și E.
+2. Calculați ieșirea de tensiune fără sarcină pentru fiecare punct de priză al circuitului divizor de tensiune de mai sus dacă rețeaua rezistivă conectată în serie este conectată la o sursă de curent continuu de $15\text{ volți}$.
+
+**Schema circuitului:**
+![Schema 3](images/cde_problems1_schema_03.png)
+
+**Rezolvare:**
+Rezistența totală:
+$$R_T = R_1 + R_2 + R_3 + R_4 = 8k\Omega + 4k\Omega + 2k\Omega + 1k\Omega = 15k\Omega$$
+
+Pentru ieșirea de tensiune între punctele B și E:
+$$V_{BE} = V_S \left( \frac{R_2 + R_3 + R_4}{R_T} \right) = 15 \left( \frac{4k\Omega + 2k\Omega + 1k\Omega}{15k\Omega} \right) = 7\text{ volts}$$
+
+Pentru ieșirile de tensiune în fiecare punct de priză:
+$$V_{R1} = V_{AB} = V_S \left( \frac{R_1}{R_T} \right) = 15 \left( \frac{8000}{15000} \right) = 8\text{ volts}$$
+
+$$V_{R2} = V_{BC} = V_S \left( \frac{R_2}{R_T} \right) = 15 \left( \frac{4000}{15000} \right) = 4\text{ volts}$$
+
+$$V_{R3} = V_{CD} = V_S \left( \frac{R_3}{R_T} \right) = 15 \left( \frac{2000}{15000} \right) = 2\text{ volts}$$
+
+$$V_{R4} = V_{DE} = V_S \left( \frac{R_4}{R_T} \right) = 15 \left( \frac{1000}{15000} \right) = 1\text{ volts}$$
+
+***
+
+## Problema 4: Divizor de tensiune cu punct de masă (referință) decalat
+
+**Condiția și cerința problemei:**
+Folosind Legea lui Ohm, găsiți valorile rezistențelor R1, R2, R3 și R4 necesare pentru a produce nivele de tensiune de $-12\text{V}, +3,3\text{V}, +5\text{V} \text{ și } +12\text{V}$ dacă puterea totală furnizată circuitului divizor de tensiune fără sarcină este de $24\text{ volți DC, } 60\text{ wați}$. 
+În acest exemplu, punctul de referință la masă cu tensiune-zero a fost mutat pentru a produce tensiunile pozitive și negative necesare. Astfel, cele patru tensiuni sunt toate măsurate în raport cu acest punct de referință comun.
+
+**Schema circuitului:**
+![Schema 4](images/cde_problems1_schema_04.png)
+
+**Rezolvare:**
+Puterea și curentul total:
+$$P = V \times I \quad \Rightarrow \quad I = \frac{P}{V} = \frac{60}{24} = 2.5\text{A}$$
+
+Calculul fiecărei rezistențe folosind Legea lui Ohm ($R = \frac{U}{I}$):
+$$R_1 = \frac{V_A - V_B}{I} = \frac{12 - 5}{2.5} = 2.8\Omega$$
+
+$$R_2 = \frac{V_B - V_C}{I} = \frac{5 - 3.3}{2.5} = 0.68\Omega$$
+
+$$R_3 = \frac{V_C - 0}{I} = \frac{3.3}{2.5} = 1.32\Omega$$
+
+$$R_4 = \frac{V_D - 0}{I} = \frac{12}{2.5} = 4.8\Omega$$
+
+---
+# TEMA 5: Diode Semiconductoare
+
+## Problema 1
+
+**Condiția problemei:**
+O diodă semiconductoare are caracteristica de funcționare indicată în figura de mai jos. Să se determine valoarea rezistenței de curent continuu a diodei respective dacă:
+a. curentul continuu prin aceasta este egal cu $20 \text{ [mA]}$.
+b. curentul continuu prin aceasta este egal cu $2 \text{ [mA]}$.
+c. tensiunea continuă pe aceasta este egală cu $-10 \text{ [V]}$.
+
+**Schema:**
+![Schema 1](images/cde_problems2_schema_01.png)
+
+**Rezolvare:**
+a. Conform caracteristicii de funcționare, atunci când curentul continuu prin dioda considerată este egal cu $20 \text{ [mA]}$, tensiunea pe aceasta este egală cu $0,8 \text{ [V]}$. În acest caz, valoarea rezistenței diodei în curent continuu este:
+$$R_D = \frac{V_D}{I_D} = \frac{0,8 \text{ [V]}}{20 \text{ [mA]}} = \frac{0,8}{20} \text{ [k}\Omega] = 0,04 \text{ [k}\Omega] = 40 [\Omega]$$
+
+b. Conform caracteristicii de funcționare, atunci când curentul continuu prin dioda considerată este egal cu $2 \text{ [mA]}$, tensiunea pe aceasta este egală cu $0,5 \text{ [V]}$. În acest caz, valoarea rezistenței diodei în curent continuu este:
+$$R_D = \frac{V_D}{I_D} = \frac{0,5 \text{ [V]}}{2 \text{ [mA]}} = \frac{0,5}{2} \text{ [k}\Omega] = 0,25 \text{ [k}\Omega] = 250 [\Omega]$$
+
+c. Conform caracteristicii de funcționare, atunci când tensiunea continuă pe dioda considerată este egală cu $-10 \text{ [V]}$, curentul electric prin aceasta este egală cu $-1 \text{ [}\mu\text{A]}$. În acest caz, valoarea rezistenței diodei în curent continuu este:
+$$R_D = \frac{V_D}{I_D} = \frac{-10 \text{ [V]}}{-1 \text{ [}\mu\text{A]}} = \frac{10}{1} \text{ [M}\Omega] = 10 \text{ [M}\Omega]$$
+$\text{M}\Omega = \text{megohmi} = 10^6 \text{ ohmi}$
+
+---
+
+## Problema 2
+
+**Condiția problemei:**
+O diodă semiconductoare are caracteristica de funcționare indicată în figura de mai jos. Să se determine valoarea rezistenței diodei respective dacă curentul electric variază prin diodă între valoarea minimă $2 \text{ [mA]}$ și valoarea maximă $17 \text{ [mA]}$.
+
+**Schema:**
+![Schema 2](images/cde_problems2_schema_02.png)
+
+**Rezolvare:**
+Conform caracteristicii de funcționare, atunci când valoarea curentului electric prin diodă atinge valoarea minimă de $2 \text{ [mA]}$, valoarea tensiunii pe diodă are valoarea $0,65 \text{ [V]}$, iar când valoarea curentului electric prin diodă atinge valoarea maximă de $17 \text{ [mA]}$, valoarea tensiunii pe diodă are valoarea $0,725 \text{ [V]}$. În acest caz, variația curentului electric prin diodă este
+$$\Delta i_D = i_{D\text{ max}} - i_{D\text{ min}} = 17 \text{ [mA]} - 2 \text{ [mA]} = 15 \text{ [mA]}$$
+iar variația tensiunii electrice pe diodă este.
+$$\Delta v_D = v_{D\text{ max}} - v_{D\text{ min}} = 0,725 \text{ [V]} - 0,65 \text{ [V]} = 0,075 \text{ [V]} = 75 \text{ [mV]}$$
+
+Regimul în care dioda funcționează se decide în funcție de amplitudinea tensiunii pe diodă, notată $V_d$, care este egală cu jumătatea variației tensiunii pe diodă:
+$$V_d = \frac{\Delta v_D}{2} = \frac{75}{2} \text{ [mV]} = 37,5 \text{ [mV]}$$
+
+Deoarece amplitudinea tensiunii pe diodă este de ordinul zecilor de milivolți, se poate considera că dioda funcționează în regim variabil de semnal mare, și în acest caz, valoarea rezistenței de semnal mare a diodei este:
+$$r_D = \frac{\Delta v_D}{\Delta i_D} = \frac{0,075 \text{ [V]}}{15 \text{ [mA]}} = 0,005 \text{ [k}\Omega] = 5 [\Omega]$$
+
+---
+
+## Problema 3
+
+**Condiția problemei:**
+O diodă semiconductoare are caracteristica de funcționare indicată în figura de mai jos. Să se determine valoarea rezistenței diodei respective dacă curentul electric variază prin diodă între valoarea minimă $20 \text{ [mA]}$ și valoarea maximă $30 \text{ [mA]}$, iar valoarea curentului continuu a acestuia este egală cu $25 \text{ [mA]}$. Rezistența diodei se calculează la temperatura $T=25^0\text{C}$.
+
+**Schema:**
+![Schema 3](images/cde_problems2_schema_03.png)
+
+**Rezolvare:**
+Conform caracteristicii de funcționare, atunci când valoarea curentului electric prin diodă atinge valoarea minimă de $20 \text{ [mA]}$, valoarea tensiunii pe diodă are valoarea $0,78 \text{ [V]}$, iar când valoarea curentului electric prin diodă atinge valoarea maximă de $30 \text{ [mA]}$, valoarea tensiunii pe diodă are valoarea $0,8 \text{ [V]}$. În acest caz, variația tensiunii electrice pe diodă este.
+$$\Delta v_D = v_{D\text{ max}} - v_{D\text{ min}} = 0,8 \text{ [V]} - 0,78 \text{ [V]} = 0,002 \text{ [V]} = 20 \text{ [mV]}$$
+
+Regimul în care dioda funcționează se decide în funcție de amplitudinea tensiunii pe diodă, notată $V_d$, care este egală cu jumătatea variației tensiunii pe diodă:
+$$V_d = \frac{\Delta v_D}{2} = \frac{20}{2} \text{ [mV]} = 10 \text{ [mV]}$$
+
+Deoarece amplitudinea tensiunii pe diodă este mai mică decât $12,5$ milivolți, se poate considera că dioda funcționează în regim variabil de semnal mic, și în acest caz, valoarea rezistenței de semnal mare a diodei este:
+$$r_d = \frac{V_T}{I_D} = \frac{25 \text{ [mV]}}{25 \text{ [mA]}} = 1 [\Omega]$$
+
+---
+
+## Problema 4
+
+**Condiția problemei:**
+Pentru figura de mai jos se consideră $\text{E}=5 \text{ [V]}$, $\text{R}=220 \text{ [}\Omega\text{]}$. 
+a. Care este regiunea în care funcționează dioda? 
+b. Să se determine valoarea curentului continuu prin diodă. 
+c. Să se calculeze valoarea rezistenței de curent continuu a diodei. 
+d. Să se calculeze valoarea rezistenței de semnal mic a diodei la temperatura $\text{T}=25^0\text{C}$.
+
+**Schema:**
+![Schema 4](images/cde_problems2_schema_04.png)
+
+**Rezolvare:**
+a. Deoarece singura sursă de alimentare din circuit este o sursă de tensiune continuă, dioda funcționează în regim de curent continuu. În continuare, se observă că borna negativă a sursei de alimentare E se aplică direct pe catodul diodei, iar borna pozitivă a sursei de alimentare E se aplică pe anodul diodei prin intermediul rezistorului R. În aceste condiții, potențialul electric aplicat pe anod are o valoare mai mare decât cel aplicat pe catod și în consecință dioda funcționează în regiunea de conducție directă.
+
+b. Pentru calculul curentului continuu prin circuit, dioda se înlocuiește cu circuitul său echivalent în curent continuu, în conducție directă, iar circuitul inițial devine cel din figura de mai jos. **Atenție!** **Sensul curentului electric prin diodă trebuie orientat de la anod spre catod, iar sursa de tensiune $V_D$ care modelează dioda trebuie să fie orientată cu borna pozitivă la anod, iar cea negativă la catod.** Dacă nu se respectă aceste convenții, circuitul echivalent pe care se fac calculele în regim de curent continuu este greșit.
+
+Circuitul echivalent de calcul a curentului continuu.
+![Schema 5](images/cde_problems2_schema_05.png)
+
+Relația matematică a curentului continuu se deduce aplicând teorema lui Kirkhoff 2 pe bucla de circuit formată; alegând pentru sensul de parcurgere al buclei sensul orar, rezultă:
+$$R \cdot I_D + V_D - E = 0 \Rightarrow I_D = \frac{E - V_D}{R}$$
+
+Deoarece pentru parametrul $V_D$ nu s-a specificat explicit nicio valoare, se consideră $V_D = 0,6 \text{ [V]}$
+
+$$\Rightarrow I_D = \frac{5 \text{ [V]} - 0,6 \text{ [V]}}{220 \text{ [}\Omega\text{]}} = \frac{4,4 \text{ [V]}}{0,220 \text{ [k}\Omega\text{]}} = 20 \text{ [mA]}$$
+
+c. Rezistența de curent continuu a diodei se calculează cu relația:
+$$R_D = \frac{V_D}{I_D} = \frac{0,6 \text{ [V]}}{20 \text{ [mA]}} = \frac{0,6}{20} \text{ [k}\Omega] = 0,03 \text{ [k}\Omega] = 30 [\Omega]$$
+
+d. Rezistența de semnal mic a diodei se calculează cu relația:
+$$r_d = \frac{V_T}{I_D} = \frac{25 \text{ [mV]}}{20 \text{ [mA]}} = 1,25 [\Omega]$$
+
+---
+
+## Problema 5
+
+**Condiția problemei:**
+Pentru figura de mai jos se consideră $\text{E1}=10 \text{ [V]}$, $\text{R1}=4,7 \text{ [k}\Omega\text{]}$, $\text{E2}=5 \text{ [V]}$, $\text{R2}=2,2 \text{ [k}\Omega\text{]}$. Să se calculeze valoarea curentului continuu prin diodă și valoarea tensiunii $\text{V}$.
+
+**Schema:**
+![Schema 6](images/cde_problems2_schema_06.png)
+
+**Rezolvare:**
+Deoarece singurele surse de alimentare din circuit sunt surse de tensiune continuă, dioda funcționează în regim de curent continuu. În continuare, se presupune că dioda funcționează în regiunea de conducție directă și se calculează curentul continuu prin diodă, stabilit cu sensul de la anod spre catod. În cazul în care valoarea numerică a curentului calculat rezultă pozitivă, atunci presupunerea este adevărată, iar dioda funcționează în conducție directă. În cazul în care valoarea numerică a curentului calculat rezultă negativă, atunci presupunerea este falsă, iar dioda funcționează în conducție inversă. Pentru calculul curentului continuu prin circuit, dioda se înlocuiește cu circuitul său echivalent în curent continuu, în conducție directă, iar circuitul inițial devine cel din figura de mai jos.
+
+Circuitul echivalent de calcul a curentului continuu.
+![Schema 7](images/cde_problems2_schema_07.png)
+
+Relația matematică a curentului continuu se deduce aplicând teorema lui Kirkhoff 2 pe bucla de circuit formată; alegând pentru sensul de parcurgere al buclei sensul orar, rezultă:
+$$R_1 \cdot I_D + V_D + R_2 \cdot I_D - E_2 - E_1 = 0 \Rightarrow I_D = \frac{E_1 + E_2 - V_D}{R_1 + R_2}$$
+
+Deoarece pentru parametrul $V_D$ nu s-a specificat explicit nicio valoare, se consideră $V_D = 0,6 \text{ [V]}$
+$$\Rightarrow I_D = \frac{10 \text{ [V]} + 5 \text{ [V]} - 0,6 \text{ [V]}}{4,7 \text{ [k}\Omega\text{]} + 2,2 \text{ [k}\Omega\text{]}} = \frac{14,4 \text{ [V]}}{6,9 \text{ [k}\Omega\text{]}} \cong 2,08 \text{ [mA]}$$
+
+Valoarea curentului electric, cu sensul de la anod spre catod a rezultat pozitivă, deci presupunerea este corectă. În cazul în care valoarea curentului electric ar fi rezultat negativă, atunci dioda ar fi funcționat în conducție inversă. În acest caz, curentul continuu prin diodă ar fi fost considerat zero, deoarece atunci când funcționează în conducție inversă, dioda nu permite trecerea curentului electric prin ea.
+Tensiunea $\text{V}$ este tensiunea care cade pe elementele de circuit $\text{R2}$ și $\text{E2}$. Ținând cont de referințele mărimilor electrice din circuit, tensiunea $\text{V}$ se calculează cu relația:
+$$V = R_2 \cdot I_D - E_2 = 2,2 \text{ [k}\Omega\text{]} \cdot 2,08 \text{ [mA]} - 5 \text{ [V]} = 4,57 \text{ [V]} - 5 \text{ [V]} = -0,43 \text{ [V]}$$
+
+---
+
+## Problema 6
+
+**Condiția problemei:**
+Pentru figura de mai jos se consideră $\text{E1}=15 \text{ [V]}$, $\text{R}=2,2 \text{ [k}\Omega\text{]}$, $\text{E2}=4 \text{ [V]}$. Să se calculeze valoarea curentului continuu prin cele două diode.
+
+**Schema:**
+![Schema 8](images/cde_problems2_schema_08.png)
+
+**Rezolvare:**
+Deoarece singurele surse de alimentare din circuit sunt surse de tensiune continuă, diodele funcționează în regim de curent continuu. În continuare, se observă că borna minus a sursei $\text{E2}$ este aplicată direct pe catodul lui $\text{D1}$, respectiv pe anodul lui $\text{D2}$. Din aceste motive, $\text{D1}$ funcționează în conducție directă, iar $\text{D2}$ în conducție inversă. $\text{D2}$ funcționând în conducție inversă, curentul electric prin ea este nul $\text{I}_{\text{D2}} = 0 \text{ [A]}$. Curentul prin $\text{D1}$ se calculează pe circuitul echivalent de mai jos, în care cele 2 diode sunt înlocuite cu circuitele lor echivalente în curent continuu, în funcție de regiunea de funcționare.
+
+Circuitul echivalent de calcul a curentului continuu.
+![Schema 9](images/cde_problems2_schema_09.png)
+
+Relația matematică a curentului continuu prin $\text{D1}$ se deduce aplicând teorema lui Kirkhoff 2 pe bucla de circuit formată; alegând pentru sensul de parcurgere al buclei sensul orar, rezultă:
+$$R \cdot I_{D1} + V_D - E_2 - E_1 = 0 \Rightarrow I_{D1} = \frac{E_1 + E_2 - V_D}{R}$$
+
+Deoarece pentru parametrul $V_D$ nu s-a specificat explicit nicio valoare, se consideră $V_D = 0,6 \text{ [V]}$
+$$\Rightarrow I_{D1} = \frac{15 \text{ [V]} + 4 \text{ [V]} - 0,6 \text{ [V]}}{2,2 \text{ [k}\Omega\text{]}} = \frac{18,4 \text{ [V]}}{2,2 \text{ [k}\Omega\text{]}} \cong 8,36 \text{ [mA]}$$
+
+---
+
+## Problema 7
+
+**Condiția problemei:**
+Pentru figura de mai jos se consideră $\text{E}=20 \text{ [V]}$, $\text{R1}=4,7 \text{ [k}\Omega\text{]}$, $\text{R2}=3,5 \text{ [k}\Omega\text{]}$, iar parametrii diodelor sunt $\text{V}_{\text{D1}}=0,65 \text{ [V]}$, respectiv $\text{V}_{\text{D2}}=0,7 \text{ [V]}$. Să se calculeze valoarea curentului continuu prin cele 2 diode.
+
+**Schema:**
+![Schema 10](images/cde_problems2_schema_10.png)
+
+**Rezolvare:**
+Deoarece singura sursă de alimentare din circuit este sursă de tensiune continuă, diodele funcționează în regim de curent continuu. În continuare, se presupune că ambele diode funcționează în regiunea de conducție directă și se calculează curenții continui prin acestea, al căror sens este stabilit de la anod spre catod. În cazul în care valoarea numerică a curenților calculați rezultă pozitivi, atunci presupunerea este adevărată, iar diodele funcționează în conducție directă. În cazul în care valoarea numerică a unui curent calculat rezultă negativă, atunci presupunerea este falsă, iar dioda respectivă funcționează în conducție inversă, caz în care curentul prin aceasta este nul.
+
+Circuitul echivalent de calcul a curentului continuu.
+![Schema 11](images/cde_problems2_schema_11.png)
+
+Aplicând teorema lui Kirkhoff 2 pe bucla de circuit formată din elementele $\text{R2}$ și $\text{VD2}$, alegând pentru sensul de parcurgere al buclei respective sensul orar, rezultă:
+$$R_2 \cdot I - V_{D2} = 0 \Rightarrow I = \frac{V_{D2}}{R_2} \Rightarrow I = \frac{0,7 \text{ [V]}}{3,5 \text{ [k}\Omega\text{]}} = 0,2 \text{ [mA]}$$
+
+Aplicând teorema lui Kirkhoff 2 pe bucla de circuit formată din elementele $\text{VD1}$, $\text{VD2}$, $\text{R1}$ și $\text{E}$, alegând pentru sensul de parcurgere al buclei respective sensul orar, rezultă:
+$$V_{D1} + V_{D2} + R_1 \cdot I_{D1} - E = 0 \Rightarrow I_{D1} = \frac{E - (V_{D1} + V_{D2})}{R_1} \Rightarrow I_{D1} = \frac{20 \text{ [V]} - (0,65 \text{ [V]} + 0,7 \text{ [V]})}{4,7 \text{ [k}\Omega\text{]}} = \frac{18,65 \text{ [V]}}{4,7 \text{ [k}\Omega\text{]}} = \frac{18,65}{4,7} \text{ [mA]} \cong 3,96 \text{ [mA]}$$
+
+Atenție! Curentul prin $\text{R1}$ nu este $\text{I}$, ci $\text{I}_{\text{D1}}$. Curentul $\text{I}$ circulă numai prin ramura compusă dintr-un singur element și anume $\text{R2}$. Datorită nodurilor de circuit superior, respectiv inferior, pe ramura $\text{R1}$, $\text{E}$, $\text{VD1}$ curentul este $\text{I}_{\text{D1}}$, diferit de $\text{I}$.
+
+Aplicând teorema lui Kirkhoff 1 în nodul superior, rezultă:
+$$I_{D1} = I_{D2} + I \Rightarrow I_{D2} = I_{D1} - I \Rightarrow I_{D2} = 3,96 \text{ [mA]} - 0,2 \text{ [mA]} = 3,76 \text{ [mA]}$$
