@@ -40,7 +40,7 @@ c. Să se calculeze valoarea curentului electric printr-o rezistență electric�
 **Rezolvare:**
 **a.** Ecuația de funcționare a rezistorului este $V_R = R \cdot I_R$. Din această relație:
 $I_R = \frac{V_R}{R} \Rightarrow I_R = \frac{5[V]}{10[k\Omega]} = 0,5\left[\frac{V}{k\Omega}\right] = 0,5[mA]$
-*(Regulă de reținut: $\frac{volt}{kiloohm} = miliamper \Rightarrow \frac{V}{k\Omega} = mA$)*.
+*(Regulă de reținut: volt/kiloohm = miliamper ⇒ V/kΩ = mA)*.
 
 **b.** Pentru tensiunea sinusoidală, ecuația este $v_R = R \cdot i_R$:
 $i_R = \frac{v_R}{R} \Rightarrow i_R = \frac{2 + 1 \cdot \sin(\omega \cdot t)\ [V]}{10[k\Omega]} = \frac{2}{10} + \frac{1 \cdot \sin(\omega \cdot t)}{10}\ [mA]$
