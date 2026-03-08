@@ -364,22 +364,65 @@ function renderAllMath() {
 }
 
 // ── Search & filter ────────────────────────────────────────────────
+
+// Strip diacritics so "dioda" matches "diodă", "ohm" matches etc.
+function normalize(s) {
+  return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+// Levenshtein distance (capped at 2 for performance)
+function editDistance(a, b) {
+  if (Math.abs(a.length - b.length) > 2) return 99;
+  const dp = Array.from({ length: a.length + 1 }, (_, i) => [i]);
+  for (let j = 1; j <= b.length; j++) dp[0][j] = j;
+  for (let i = 1; i <= a.length; i++)
+    for (let j = 1; j <= b.length; j++)
+      dp[i][j] = a[i-1] === b[j-1]
+        ? dp[i-1][j-1]
+        : 1 + Math.min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]);
+  return dp[a.length][b.length];
+}
+
+// Check if a term matches a haystack string, returns match quality:
+//  2 = exact substring, 1 = fuzzy (1-2 edits on a word), 0 = no match
+function termScore(term, haystack) {
+  if (haystack.includes(term)) return 2;
+  // Fuzzy: only for terms >= 4 chars — check each word in haystack
+  if (term.length >= 4) {
+    const words = haystack.split(/[\s,.()\[\]{}$\\\/\-_|:;]+/).filter(w => w.length >= 3);
+    const maxDist = term.length >= 6 ? 2 : 1;
+    for (const w of words) {
+      if (Math.abs(w.length - term.length) <= maxDist && editDistance(term, w) <= maxDist)
+        return 1;
+    }
+  }
+  return 0;
+}
+
+// Weighted fields: title=10, tags=6, themeTitle=3, content=1
 function score(entry, terms) {
   if (!terms.length) return 1;
-  const haystack = [
-    entry.title,
-    entry.theme,
-    entry.themeTitle,
-    entry.type,
-    entry.tags.join(' '),
-    entry.content
-  ].join(' ').toLowerCase();
 
-  let hits = 0;
+  const fields = [
+    { text: normalize(entry.title),                weight: 10 },
+    { text: normalize(entry.tags.join(' ')),        weight: 6  },
+    { text: normalize(entry.themeTitle),            weight: 3  },
+    { text: normalize(entry.theme),                 weight: 3  },
+    { text: normalize(entry.type),                  weight: 2  },
+    { text: normalize(entry.content),               weight: 1  },
+  ];
+
+  let total = 0;
   for (const t of terms) {
-    if (haystack.includes(t)) hits++;
+    const nt = normalize(t);
+    let best = 0;
+    for (const f of fields) {
+      const q = termScore(nt, f.text);
+      if (q > 0) best = Math.max(best, q * f.weight);
+    }
+    total += best;
   }
-  return hits;
+  return total;
 }
 
 function matchesFilter(entry) {
@@ -482,6 +525,20 @@ function render() {
       </div>
       <div class="card-body" id="body-${e.id}">
         ${markdownWithMath(e.content)}
+      </div>
+    </div>
+  `).join('');
+
+  // Auto-open first card when searching
+  if (query.trim() && results.length > 0) {
+    const first = document.getElementById('card-' + results[0].id);
+    if (first) first.classList.add('open');
+  }
+
+  renderAllMath();
+}
+
+function toggleCard(id) {
   const card = document.getElementById('card-' + id);
   card.classList.toggle('open');
   if (card.classList.contains('open')) renderAllMath();
