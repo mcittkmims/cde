@@ -322,12 +322,12 @@
 <div class="filters" id="filters">
   <span class="chip active" data-filter="all">Toate</span>
   <span class="chip" data-filter="problem">Probleme</span>
-  <span class="chip" data-filter="theory">Teorie</span>
-  <span class="chip" data-filter="TEMA 1">Tema 1</span>
-  <span class="chip" data-filter="TEMA 2">Tema 2</span>
-  <span class="chip" data-filter="TEMA 3">Tema 3</span>
-  <span class="chip" data-filter="TEMA 4">Tema 4</span>
-  <span class="chip" data-filter="TEMA 5">Tema 5</span>
+  <span class="chip" data-filter="theory">Teorie / Concepte</span>
+  <span class="chip" data-filter="TEMA 1">T1 · Calcule &amp; Conversii</span>
+  <span class="chip" data-filter="TEMA 2">T2 · Legea lui Ohm</span>
+  <span class="chip" data-filter="TEMA 3">T3 · Kirchhoff</span>
+  <span class="chip" data-filter="TEMA 4">T4 · Divizoare de Tensiune</span>
+  <span class="chip" data-filter="TEMA 5">T5 · Diode Semiconductoare</span>
 </div>
 
 <main>
@@ -447,7 +447,7 @@ function render() {
       <div class="card-header" onclick="toggleCard(${e.id})">
         <div class="card-badges">
           <span class="badge badge-${e.type}">${e.type === 'problem' ? 'Problemă' : 'Teorie'}</span>
-          <span class="badge ${themeBadgeClass(e.theme)}">${e.theme}</span>
+          ${e.theme !== 'TEORIE' ? `<span class="badge ${themeBadgeClass(e.theme)}">${e.theme}</span>` : ''}
         </div>
         <div class="card-title">${highlightTitle(e.title)}</div>
         <svg class="card-chevron" width="16" height="16" viewBox="0 0 24 24"
