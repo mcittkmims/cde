@@ -424,6 +424,31 @@ function themeBadgeClass(theme) {
   return 'badge-' + (map[theme] || 'teorie');
 }
 
+// ── Markdown + Math (protect math from marked) ────────────────────
+function markdownWithMath(src) {
+  const stash = [];
+
+  // Protect $$ ... $$ display blocks first
+  src = src.replace(/\$\$([\s\S]*?)\$\$/g, (m) => {
+    stash.push(m);
+    return `\x00MATH${stash.length - 1}\x00`;
+  });
+
+  // Protect $ ... $ inline (single-line only)
+  src = src.replace(/\$([^\$\n]+?)\$/g, (m) => {
+    stash.push(m);
+    return `\x00MATH${stash.length - 1}\x00`;
+  });
+
+  // Now safe to parse markdown
+  let html = marked.parse(src);
+
+  // Restore math tokens
+  html = html.replace(/\x00MATH(\d+)\x00/g, (_, i) => stash[+i]);
+
+  return html;
+}
+
 // ── Render ─────────────────────────────────────────────────────────
 function render() {
   const results = getResults();
@@ -456,21 +481,7 @@ function render() {
         </svg>
       </div>
       <div class="card-body" id="body-${e.id}">
-        ${marked.parse(e.content)}
-      </div>
-    </div>
-  `).join('');
-
-  // Auto-open first card when searching
-  if (query.trim() && results.length > 0) {
-    const first = document.getElementById('card-' + results[0].id);
-    if (first) first.classList.add('open');
-  }
-
-  renderAllMath();
-}
-
-function toggleCard(id) {
+        ${markdownWithMath(e.content)}
   const card = document.getElementById('card-' + id);
   card.classList.toggle('open');
   if (card.classList.contains('open')) renderAllMath();
