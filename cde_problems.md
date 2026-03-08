@@ -28,7 +28,6 @@ a. $R = 500[\Omega] + 0,01[M\Omega] + 2[k\Omega] = 0,5[k\Omega] + 10[k\Omega] + 
 b. $R = 500[\Omega] + 1,2[M\Omega] + 0,05[M\Omega] + 20[k\Omega] + 800[\Omega] = 0,5[k\Omega] + 1200[k\Omega] + 50[k\Omega] + 20[k\Omega] + 0,8[k\Omega] = 1271,3[k\Omega]$
 
 ---
----
 
 # TEMA 2: Legea lui Ohm (Regim de curent continuu și alternativ)
 
@@ -55,11 +54,9 @@ Din această expresie reies parametrii curentului alternativ:
 **c.** Pentru $R \rightarrow \infty$, conform legii lui Ohm, intensitatea curentului tinde spre zero: $I = \frac{V}{\infty} = 0\ A$.
 
 ---
----
 
 # TEMA 3: Probleme - Circuite Electrice (Legea lui Ohm și Legile lui Kirchhoff)
 
-Schemele electrice de mai jos au fost randate ca imagini PNG și sunt legate din folderul `images/`, pentru afișare corectă în Markdown.
 
 ### PROBLEMA 01
 
@@ -122,7 +119,7 @@ XMM4 = Voltmetru ($U_3 = U_{AB}$)
 
 **Rezolvare:**
 Aplicând legile lui Kirchhoff, rezultă un sistem de 3 ecuații cu 3 necunoscute ($I, I_1, I_2$):
-$\begin{cases}
+$$\begin{cases}
 V_1 = I \cdot R_3 + I_2 \cdot R_2 \\
 I_1 \cdot R_1 = I_2 \cdot R_2 \\
 I = I_1 + I_2
@@ -130,7 +127,7 @@ I = I_1 + I_2
 16 = 2,5 \cdot I + 30 \cdot I_2 \\
 10 \cdot I_1 = 30 \cdot I_2 \Rightarrow I_1 = 3 \cdot I_2 \\
 I = I_1 + I_2
-\end{cases}$
+\end{cases}$$
 
 Înlocuind prima ecuație cu expresia curenților:
 $16 = 2,5 \cdot (3 I_2 + I_2) + 30 I_2$
@@ -165,11 +162,11 @@ XMM3 = Voltmetru ($U_2$)
 
 **Rezolvare:**
 Conform legilor lui Kirchhoff:
-$\begin{cases}
+$$\begin{cases}
 V_1 = (R_1 + R_2) \cdot I \\
 U_1 = R_1 \cdot I \\
 U_2 = R_2 \cdot I
-\end{cases}$
+\end{cases}$$
 
 $18 = (12 + 36) \cdot I$
 $18 = 48 \cdot I \Rightarrow I = \frac{18}{48} = 0,375\ A$
