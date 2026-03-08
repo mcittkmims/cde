@@ -1,7 +1,7 @@
 
 # TEMA 1: Recapitulare (Calcule matematice și conversii)
 
-### Problema 1
+## Problema 1
 Să se calculeze:
 a. $10^3 \cdot 10 \cdot 10^{-12}$
 b. $(10^3)^2 \cdot 10^{-9}$
@@ -18,7 +18,7 @@ e. $\sqrt{10^{-12+2+7}} = \sqrt{10^{-3}} = 10^{-\frac{3}{2}} = \frac{1}{10^{\fra
 
 ---
 
-### Problema 2
+## Problema 2
 Să se exprime în kiloohmi valorile următoarelor rezistențe electrice *(Notă: la punctul b. s-a corectat valoarea din text pentru a corespunde cu rezolvarea din prezentare)*:
 a. $R = 500[\Omega] + 0,01[M\Omega] + 2[k\Omega]$
 b. $R = 500[\Omega] + 1,2[M\Omega] + 0,05[M\Omega] + 20[k\Omega] + 800[\Omega]$
@@ -31,7 +31,7 @@ b. $R = 500[\Omega] + 1,2[M\Omega] + 0,05[M\Omega] + 20[k\Omega] + 800[\Omega] =
 
 # TEMA 2: Legea lui Ohm (Regim de curent continuu și alternativ)
 
-### Problema 3
+## Problema 3
 Să se determine curentul electric printr-un rezistor a cărui rezistență electrică are valoarea $R = 10[k\Omega]$, dacă pe acesta se aplică:
 a. O tensiune continuă de valoare $V_R = 5[V]$.
 b. O tensiune sinusoidală de valoare $v_R(\omega \cdot t) = 2 + 1 \cdot \sin(\omega \cdot t)\ [V]$.
@@ -58,7 +58,7 @@ Din această expresie reies parametrii curentului alternativ:
 # TEMA 3: Probleme - Circuite Electrice (Legea lui Ohm și Legile lui Kirchhoff)
 
 
-### PROBLEMA 01
+## Problema 1
 
 **Schema circuitului:**
 ![Schema circuitului - Problema 1](images/problema_01.png)
@@ -81,7 +81,7 @@ $I = 0,3\ A$
 
 ---
 
-### PROBLEMA 02
+## Problema 2
 
 **Schema circuitului:**
 ![Schema circuitului - Problema 2](images/problema_02.png)
@@ -104,7 +104,7 @@ $I = 0,6\ A$
 
 ---
 
-### PROBLEMA 03
+## Problema 3
 
 **Schema circuitului:**
 ![Schema circuitului - Problema 3](images/problema_03.png)
@@ -148,7 +148,7 @@ $I_1 = 1,2\ A$, $I_2 = 0,4\ A$, $U_3 = 4\ V$, $I = 1,6\ A$, $R_{12} = 7,5\ \Omeg
 
 ---
 
-### PROBLEMA 04
+## Problema 4
 
 **Schema circuitului:**
 ![Schema circuitului - Problema 4](images/problema_04.png)
@@ -180,7 +180,7 @@ $U_1 = 4,5\ V$, $U_2 = 13,5\ V$, $I = 0,375\ A$, $R_E = 48\ \Omega$
 
 ---
 
-### PROBLEMA 05 (Circuit Mixt)
+## Problema 5 (Circuit Mixt)
 
 **Schema circuitului:**
 ![Schema circuitului - Problema 5](images/problema_05.png)
@@ -229,7 +229,7 @@ $$V_{R1} = I \times R_1 = V_S \left( \frac{R_1}{R_1 + R_2} \right) = 12 \left( \
 
 $$V_{R2} = I \times R_2 = V_S \left( \frac{R_2}{R_1 + R_2} \right) = 12 \left( \frac{40}{20 + 40} \right) = 8\text{ volts}$$
 
-***
+---
 
 ## Problema 2: Divizor cu trei rezistoare în buclă
 
@@ -251,7 +251,7 @@ $$V_{R2} = V_S \left( \frac{R_2}{R_T} \right) = 36 \left( \frac{12000}{36000} \r
 
 $$V_{R3} = V_S \left( \frac{R_3}{R_T} \right) = 36 \left( \frac{18000}{36000} \right) = 18\text{ volts}$$
 
-***
+---
 
 ## Problema 3: Rețea divizoare cu multiple puncte de priză (fără sarcină)
 
@@ -279,7 +279,7 @@ $$V_{R3} = V_{CD} = V_S \left( \frac{R_3}{R_T} \right) = 15 \left( \frac{2000}{1
 
 $$V_{R4} = V_{DE} = V_S \left( \frac{R_4}{R_T} \right) = 15 \left( \frac{1000}{15000} \right) = 1\text{ volts}$$
 
-***
+---
 
 ## Problema 4: Divizor de tensiune cu punct de masă (referință) decalat
 
