@@ -106,7 +106,7 @@ c. Rezistență infinită (element **GOL**)
     themeTitle: "Circuite Electrice – Legea lui Ohm și Legile lui Kirchhoff",
     title: "Problema 1 – Serie + Paralel (R1, R2, R3‖R4)",
     tags: ["kirchhoff", "ohm", "paralel", "serie", "rezistenta echivalenta", "RE", "curent", "R1=10", "R2=20", "R3=20", "R4=20", "V1=12", "12V"],
-    content: `![Schema circuitului](images/problema_01.png)
+    content: `![Schema circuitului](images/problema_01.svg)
 
 **Date:** $R_1=10\\,\\Omega,\\; R_2=20\\,\\Omega,\\; R_3=20\\,\\Omega,\\; R_4=20\\,\\Omega,\\; V_1=12\\,V$
 
@@ -130,7 +130,7 @@ $$I = \\frac{V_1}{R_E} = \\frac{12}{40} = \\boxed{0{,}3\\,A = 300\\,mA}$$`
     themeTitle: "Circuite Electrice – Legea lui Ohm și Legile lui Kirchhoff",
     title: "Problema 2 – (R1‖R5) + R2 + (R3‖R4)",
     tags: ["kirchhoff", "ohm", "paralel", "serie", "mixt", "rezistenta echivalenta", "RE", "R1=10", "R2=12", "R3=40", "R4=10", "R5=10", "V1=15", "15V"],
-    content: `![Schema circuitului](images/problema_02.png)
+    content: `![Schema circuitului](images/problema_02.svg)
 
 **Date:** $R_1=10\\,\\Omega,\\;R_2=12\\,\\Omega,\\;R_3=40\\,\\Omega,\\;R_4=10\\,\\Omega,\\;R_5=10\\,\\Omega,\\;V_1=15\\,V$
 
@@ -154,7 +154,7 @@ $$I = \\frac{15}{25} = \\boxed{0{,}6\\,A = 600\\,mA}$$`
     themeTitle: "Circuite Electrice – Legea lui Ohm și Legile lui Kirchhoff",
     title: "Problema 3 – Kirchhoff, curenți de ramură I1, I2",
     tags: ["kirchhoff", "sistem ecuatii", "curent ramura", "I1", "I2", "ampermetru", "voltmetru", "UAB", "R1=10", "R2=30", "R3=2.5", "V1=16", "16V"],
-    content: `![Schema circuitului](images/problema_03.png)
+    content: `![Schema circuitului](images/problema_03.svg)
 
 **Date:** $R_1=10\\,\\Omega,\\;R_2=30\\,\\Omega,\\;R_3=2{,}5\\,\\Omega,\\;V_1=16\\,V$
 
@@ -180,7 +180,7 @@ $$R_{12}=\\frac{10\\cdot30}{40}=7{,}5\\,\\Omega,\\quad R_E=\\boxed{10\\,\\Omega}
     themeTitle: "Circuite Electrice – Legea lui Ohm și Legile lui Kirchhoff",
     title: "Problema 4 – Divizor de tensiune serie (U1, U2)",
     tags: ["ohm", "kirchhoff", "serie", "tensiune", "U1", "U2", "cadere tensiune", "R1=12", "R2=36", "V1=18", "18V"],
-    content: `![Schema circuitului](images/problema_04.png)
+    content: `![Schema circuitului](images/problema_04.svg)
 
 **Date:** $R_1=12\\,\\Omega,\\;R_2=36\\,\\Omega,\\;V_1=18\\,V$
 
@@ -204,7 +204,7 @@ $$R_E = 48\\,\\Omega$$`
     themeTitle: "Circuite Electrice – Legea lui Ohm și Legile lui Kirchhoff",
     title: "Problema 5 – Circuit mixt (R2‖R3‖R4 în serie cu R1, R5, R6)",
     tags: ["circuit mixt", "paralel", "serie", "R234", "R1=7", "R2=5", "R3=3", "R4=6", "R5=8", "R6=9", "V1=12", "12V", "U1"],
-    content: `![Schema circuitului](images/problema_05.png)
+    content: `![Schema circuitului](images/problema_05.svg)
 
 **Date:** $R_1=7\\,\\Omega,\\;R_2=5\\,\\Omega,\\;R_3=3\\,\\Omega,\\;R_4=6\\,\\Omega,\\;R_5=8\\,\\Omega,\\;R_6=9\\,\\Omega,\\;V_1=12\\,V$
 
@@ -232,7 +232,7 @@ $$I = \\frac{12}{25{,}43} \\approx \\boxed{0{,}472\\,A},\\quad U_1=7\\cdot0{,}47
     themeTitle: "Divizoare de tensiune",
     title: "Divizor simplu cu 2 rezistoare (R1=20Ω, R2=40Ω)",
     tags: ["divizor tensiune", "voltage divider", "serie", "cadere tensiune", "VR1", "VR2", "R1=20", "R2=40", "Vs=12", "12V", "200mA"],
-    content: `![Schema](images/cde_problems1_schema_01.png)
+    content: `![Schema](images/cde_problems1_schema_01.svg)
 
 **Enunț:** $R_1=20\\,\\Omega$, $R_2=40\\,\\Omega$, $V_S=12\\,V$. Cât curent circulă și cât cade pe fiecare rezistor?
 
@@ -256,7 +256,7 @@ $$V_{R2} = V_S\\cdot\\frac{R_2}{R_T} = 12\\cdot\\frac{40}{60} = \\boxed{8\\,V}$$
     themeTitle: "Divizoare de tensiune",
     title: "Divizor cu 3 rezistoare în serie (6kΩ, 12kΩ, 18kΩ)",
     tags: ["divizor tensiune", "3 rezistoare", "serie", "kiloohm", "R1=6k", "R2=12k", "R3=18k", "Vs=36", "36V", "1mA"],
-    content: `![Schema](images/cde_problems1_schema_02.png)
+    content: `![Schema](images/cde_problems1_schema_02.svg)
 
 **Date:** $V_S=36\\,V$, $R_1=6k\\Omega$, $R_2=12k\\Omega$, $R_3=18k\\Omega$
 
@@ -278,7 +278,7 @@ $$V_{R1}=36\\cdot\\frac{6}{36}=\\boxed{6\\,V},\\quad V_{R2}=\\boxed{12\\,V},\\qu
     themeTitle: "Divizoare de tensiune",
     title: "Rețea divizoare – puncte de priză A, B, C, D, E",
     tags: ["divizor tensiune", "puncte priza", "A B C D E", "VBE", "rețea rezistivă", "R1=8k", "R2=4k", "R3=2k", "R4=1k", "15V", "15kΩ"],
-    content: `![Schema](images/cde_problems1_schema_03.png)
+    content: `![Schema](images/cde_problems1_schema_03.svg)
 
 **Date:** $V_S=15\\,V$, $R_1=8k\\Omega$, $R_2=4k\\Omega$, $R_3=2k\\Omega$, $R_4=1k\\Omega$
 
@@ -302,7 +302,7 @@ $$V_{AB}=8\\,V,\\quad V_{BC}=4\\,V,\\quad V_{CD}=2\\,V,\\quad V_{DE}=1\\,V$$`
     themeTitle: "Divizoare de tensiune",
     title: "Divizor cu referință deplasată – tensiuni pozitive și negative",
     tags: ["divizor tensiune", "tensiuni negative", "tensiuni pozitive", "referinta masa", "-12V", "+3.3V", "+5V", "+12V", "24V", "60W", "2.5A"],
-    content: `![Schema](images/cde_problems1_schema_04.png)
+    content: `![Schema](images/cde_problems1_schema_04.svg)
 
 **Enunț:** Putere totală $P=60\\,W$, $V_S=24\\,V$. Se cer $R_1\\ldots R_4$ pentru nivelele $-12\\,V,\\;+3{,}3\\,V,\\;+5\\,V,\\;+12\\,V$.
 
@@ -326,7 +326,7 @@ $$R_3 = \\frac{3{,}3}{2{,}5} = \\boxed{1{,}32\\,\\Omega},\\quad R_4 = \\frac{12}
     themeTitle: "Diode Semiconductoare",
     title: "Problema 1 – Rezistența DC a diodei din caracteristică",
     tags: ["dioda", "semiconductor", "rezistenta continuu", "RD", "caracteristica", "20mA", "2mA", "-10V", "conducție", "inversă", "directă", "40Ω", "250Ω", "10MΩ"],
-    content: `![Caracteristica diodei](images/cde_problems2_schema_01.png)
+    content: `![Caracteristica diodei](images/cde_problems2_schema_01.svg)
 
 **Enunț:** Din caracteristica de funcționare se determină $R_D$ dacă:
 
@@ -355,7 +355,7 @@ $$R_D = \\frac{-10}{-1}\\,[M\\Omega] = \\boxed{10\\,[M\\Omega]}$$`
     themeTitle: "Diode Semiconductoare",
     title: "Problema 2 – Rezistența de semnal mare (2mA → 17mA)",
     tags: ["dioda", "rezistenta semnal mare", "rD", "variatie curent", "delta i", "delta v", "2mA", "17mA", "15mA", "75mV", "5Ω"],
-    content: `![Caracteristica diodei](images/cde_problems2_schema_02.png)
+    content: `![Caracteristica diodei](images/cde_problems2_schema_02.svg)
 
 **Enunț:** Curentul variază între $2\\,mA$ și $17\\,mA$. Tensiunile corespunzătoare: $0{,}65\\,V$ și $0{,}725\\,V$.
 
@@ -377,7 +377,7 @@ $$r_D = \\frac{\\Delta v_D}{\\Delta i_D} = \\frac{0{,}075}{15} = \\boxed{5\\,[\\
     themeTitle: "Diode Semiconductoare",
     title: "Problema 3 – Rezistența de semnal mic (20mA → 30mA, T=25°C)",
     tags: ["dioda", "rezistenta semnal mic", "rd", "semnal mic", "VT", "25mV", "20mA", "30mA", "25mA", "1Ω", "temperatura", "T=25"],
-    content: `![Caracteristica diodei](images/cde_problems2_schema_03.png)
+    content: `![Caracteristica diodei](images/cde_problems2_schema_03.svg)
 
 **Enunț:** $I_{D,min}=20\\,mA$, $I_{D,max}=30\\,mA$, $I_D=25\\,mA$. $T=25^\\circ C$.
 
@@ -401,7 +401,7 @@ $$r_d = \\frac{V_T}{I_D} = \\frac{25\\,[mV]}{25\\,[mA]} = \\boxed{1\\,[\\Omega]}
     themeTitle: "Diode Semiconductoare",
     title: "Problema 4 – Circuit simplu cu o diodă (E=5V, R=220Ω)",
     tags: ["dioda", "conducție directă", "curent continuu", "RD", "rd", "semnal mic", "Kirchhoff", "E=5V", "R=220Ω", "20mA", "0.6V", "30Ω", "1.25Ω"],
-    content: `![Schema](images/cde_problems2_schema_04.png)
+    content: `![Schema](images/cde_problems2_schema_04.svg)
 
 **Date:** $E=5\\,[V]$, $R=220\\,[\\Omega]$, $V_D=0{,}6\\,[V]$
 
@@ -414,7 +414,7 @@ $$r_d = \\frac{V_T}{I_D} = \\frac{25\\,[mV]}{25\\,[mA]} = \\boxed{1\\,[\\Omega]}
 **a.** Polul + al sursei → anod; polul - → catod → **conducție directă**.
 
 **b.** Circuitul echivalent:
-![Echivalent](images/cde_problems2_schema_05.png)
+![Echivalent](images/cde_problems2_schema_05.svg)
 
 $$R\\cdot I_D + V_D - E = 0 \\Rightarrow I_D = \\frac{E-V_D}{R} = \\frac{5-0{,}6}{0{,}220} = \\boxed{20\\,[mA]}$$
 
@@ -430,7 +430,7 @@ $$R\\cdot I_D + V_D - E = 0 \\Rightarrow I_D = \\frac{E-V_D}{R} = \\frac{5-0{,}6
     themeTitle: "Diode Semiconductoare",
     title: "Problema 5 – Circuit cu o diodă și 2 surse (E1=10V, E2=5V)",
     tags: ["dioda", "conducție directă", "2 surse", "Kirchhoff", "E1=10V", "E2=5V", "R1=4.7kΩ", "R2=2.2kΩ", "2.08mA", "tensiunea V", "-0.43V"],
-    content: `![Schema](images/cde_problems2_schema_06.png)
+    content: `![Schema](images/cde_problems2_schema_06.svg)
 
 **Date:** $E_1=10\\,[V]$, $R_1=4{,}7\\,[k\\Omega]$, $E_2=5\\,[V]$, $R_2=2{,}2\\,[k\\Omega]$
 
@@ -441,7 +441,7 @@ $$R\\cdot I_D + V_D - E = 0 \\Rightarrow I_D = \\frac{E-V_D}{R} = \\frac{5-0{,}6
 **Rezolvare:**
 
 Circuitul echivalent (diodă în conducție directă):
-![Echivalent](images/cde_problems2_schema_07.png)
+![Echivalent](images/cde_problems2_schema_07.svg)
 
 $$R_1 I_D + V_D + R_2 I_D = E_1+E_2 \\Rightarrow I_D = \\frac{10+5-0{,}6}{4{,}7+2{,}2} = \\frac{14{,}4}{6{,}9} \\cong \\boxed{2{,}08\\,[mA]}$$
 
@@ -455,7 +455,7 @@ $$V = R_2 I_D - E_2 = 2{,}2\\cdot2{,}08 - 5 = 4{,}57-5 = \\boxed{-0{,}43\\,[V]}$
     themeTitle: "Diode Semiconductoare",
     title: "Problema 6 – Două diode (D1 directă, D2 inversă)",
     tags: ["dioda", "2 diode", "D1", "D2", "conducție directă", "conducție inversă", "curent nul", "E1=15V", "E2=4V", "R=2.2kΩ", "8.36mA"],
-    content: `![Schema](images/cde_problems2_schema_08.png)
+    content: `![Schema](images/cde_problems2_schema_08.svg)
 
 **Date:** $E_1=15\\,[V]$, $R=2{,}2\\,[k\\Omega]$, $E_2=4\\,[V]$
 
@@ -466,7 +466,7 @@ $$V = R_2 I_D - E_2 = 2{,}2\\cdot2{,}08 - 5 = 4{,}57-5 = \\boxed{-0{,}43\\,[V]}$
 - D2: **conducție inversă** → $I_{D2}=0\\,[A]$
 
 Circuitul echivalent:
-![Echivalent](images/cde_problems2_schema_09.png)
+![Echivalent](images/cde_problems2_schema_09.svg)
 
 $$R\\cdot I_{D1} + V_D - E_2 - E_1 = 0 \\Rightarrow I_{D1} = \\frac{15+4-0{,}6}{2{,}2} = \\frac{18{,}4}{2{,}2} \\cong \\boxed{8{,}36\\,[mA]}$$`
   },
@@ -478,7 +478,7 @@ $$R\\cdot I_{D1} + V_D - E_2 - E_1 = 0 \\Rightarrow I_{D1} = \\frac{15+4-0{,}6}{
     themeTitle: "Diode Semiconductoare",
     title: "Problema 7 – Două diode în paralel (VD1=0.65V, VD2=0.7V)",
     tags: ["dioda", "2 diode", "D1", "D2", "paralel", "Kirchhoff", "VD1=0.65", "VD2=0.7", "E=20V", "R1=4.7kΩ", "R2=3.5kΩ", "3.96mA", "0.2mA", "3.76mA"],
-    content: `![Schema](images/cde_problems2_schema_10.png)
+    content: `![Schema](images/cde_problems2_schema_10.svg)
 
 **Date:** $E=20\\,[V]$, $R_1=4{,}7\\,[k\\Omega]$, $R_2=3{,}5\\,[k\\Omega]$, $V_{D1}=0{,}65\\,[V]$, $V_{D2}=0{,}7\\,[V]$
 
@@ -487,7 +487,7 @@ $$R\\cdot I_{D1} + V_D - E_2 - E_1 = 0 \\Rightarrow I_{D1} = \\frac{15+4-0{,}6}{
 ---
 
 Circuitul echivalent:
-![Echivalent](images/cde_problems2_schema_11.png)
+![Echivalent](images/cde_problems2_schema_11.svg)
 
 **Bucla R2 – VD2:**
 $$R_2 I - V_{D2}=0 \\Rightarrow I = \\frac{0{,}7}{3{,}5} = 0{,}2\\,[mA]$$
