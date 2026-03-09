@@ -417,12 +417,12 @@ function score(entry, terms) {
   let total = 0;
   for (const t of terms) {
     const nt = normalize(t);
-    let best = 0;
+    let termTotal = 0;
     for (const f of fields) {
       const q = termScore(nt, f.text);
-      if (q > 0) best = Math.max(best, q * f.weight);
+      if (q > 0) termTotal += q * f.weight;
     }
-    total += best;
+    total += termTotal;
   }
   return total;
 }
