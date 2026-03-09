@@ -616,7 +616,7 @@ $$I_{D2} = I_{D1}-I = 3{,}96-0{,}2 = \\boxed{3{,}76\\,[mA]}$$`
     type: "theory",
     theme: "TEORIE",
     themeTitle: "Tranzistoare Bipolare (BJT)",
-    title: "BJT – structură, principiu de funcționare, parametrii α și β",
+    title: "Tranzistorul Bipolar (BJT) – structură, principiu de funcționare, parametrii α și β",
     tags: ["tranzistor","BJT","bipolar","NPN","PNP","emitor","baza","colector","alfa","beta","amplificare curent","IE=IC+IB","ICBo","efect de tranzistor","purtatori","dopat"],
     content: "**Tranzistorul bipolar** este un dispozitiv activ cu 3 regiuni dopate diferit, având 3 terminale:\n- **Emitor (E)** – puternic dopat\n- **Bază (B)** – foarte subțire\n- **Colector (C)**\n\nConducția este asigurată de două tipuri de purtători (electroni și goluri) → denumirea de **bipolar**. Tipuri structurale: **PNP** și **NPN**.\n\n### Ecuația curenților\n\n$$I_E = I_C + I_B$$\n\n### Parametrii de amplificare\n\n$$I_C = \\alpha I_E + I_{CBo}, \\qquad \\alpha \\approx 0{,}97{-}0{,}99$$\n\n$$I_C = \\beta I_B + (1+\\beta)I_{CBo}, \\qquad \\beta = \\frac{\\alpha}{1-\\alpha} \\approx 10{-}100$$\n\nPrin **efectul de tranzistor**, majoritatea purtătorilor injectați din emitor difuzează prin baza subțire și sunt accelerați de câmpul colectorului."
   },
@@ -655,7 +655,7 @@ $$I_{D2} = I_{D1}-I = 3{,}96-0{,}2 = \\boxed{3{,}76\\,[mA]}$$`
     id: 35,
     type: "theory",
     theme: "TEORIE",
-    themeTitle: "Tranzistoare Bipolare (BJT)",
+    themeTitle: "Dispozitive Multijoncțiune",
     title: "Dispozitive multijoncțiune – Tiristor (SCR), Triac, Fototranzistor",
     tags: ["tiristor","SCR","triac","fototranzistor","pnpn","3 jonctiuni","anod","catod","poarta","curent de mentinere","curent alternativ","CA","antiparalel","fotoelectric","comanda","strapungere"],
     content: "### Tiristorul (SCR)\n\nDispozitiv **p-n-p-n** (3 joncțiuni), văzut ca un ansamblu de 2 tranzistoare complementare (PNP și NPN) interconectate. Terminale: **Anod**, **Catod**, **Poartă**.\n\nDacă pe Poartă se aplică un curent de comandă, tensiunea necesară intrării în conducție scade dramatic. Tiristorul rămâne deschis (conduce) cât timp curentul prin el nu scade sub o valoare minimă de **menținere**.\n\n### Triacul\n\nEchivalent cu **două tiristoare conectate antiparalel**. Conceput pentru controlul curentului electric în **ambele direcții** (ambele alternanțe) în rețele de curent alternativ.\n\n### Fototranzistorul\n\nTranzistor a cărui joncțiune emitor-bază este expusă luminii. Fotonii absorbți generează goluri și electroni (**efect fotoelectric intern**). Curentul rezultat este amplificat de câștigul $\\beta$ al tranzistorului."
