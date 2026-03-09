@@ -192,7 +192,7 @@
       line-height: 1.3;
     }
 
-    .card-title .highlight {
+    .card-title .highlight, .card-body .highlight {
       background: rgba(108,99,255,0.3);
       border-radius: 3px;
       padding: 0 2px;
@@ -538,12 +538,50 @@ function render() {
   }
 
   renderAllMath();
+  if (query.trim()) highlightContent(query.toLowerCase().split(/\s+/).filter(Boolean));
+}
+
+function highlightContent(terms) {
+  if (!terms.length) return;
+  const re = new RegExp('(' + terms.map(escRe).join('|') + ')', 'gi');
+  document.querySelectorAll('.card-body').forEach(body => {
+    // Walk all text nodes, skip katex and code subtrees
+    const walker = document.createTreeWalker(body, NodeFilter.SHOW_TEXT, {
+      acceptNode(node) {
+        const p = node.parentElement;
+        if (p.closest('.katex, code, pre')) return NodeFilter.FILTER_REJECT;
+        return node.textContent.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+    const nodes = [];
+    let n; while ((n = walker.nextNode())) nodes.push(n);
+    nodes.forEach(textNode => {
+      if (!re.test(textNode.textContent)) return;
+      re.lastIndex = 0;
+      const frag = document.createDocumentFragment();
+      let last = 0, m;
+      re.lastIndex = 0;
+      while ((m = re.exec(textNode.textContent)) !== null) {
+        if (m.index > last) frag.appendChild(document.createTextNode(textNode.textContent.slice(last, m.index)));
+        const mark = document.createElement('span');
+        mark.className = 'highlight';
+        mark.textContent = m[1];
+        frag.appendChild(mark);
+        last = m.index + m[1].length;
+      }
+      if (last < textNode.textContent.length) frag.appendChild(document.createTextNode(textNode.textContent.slice(last)));
+      textNode.parentNode.replaceChild(frag, textNode);
+    });
+  });
 }
 
 function toggleCard(id) {
   const card = document.getElementById('card-' + id);
   card.classList.toggle('open');
-  if (card.classList.contains('open')) renderAllMath();
+  if (card.classList.contains('open')) {
+    renderAllMath();
+    if (query.trim()) highlightContent(query.toLowerCase().split(/\s+/).filter(Boolean));
+  }
 }
 
 // ── Events ─────────────────────────────────────────────────────────
