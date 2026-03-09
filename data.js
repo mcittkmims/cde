@@ -607,7 +607,7 @@ $$I_{D2} = I_{D1}-I = 3{,}96-0{,}2 = \\boxed{3{,}76\\,[mA]}$$`
     theme: "TEORIE",
     themeTitle: "Surse de Alimentare și Redresoare",
     title: "Filtre și stabilizatoare – condensator, Zener, serie, 78XX/79XX",
-    tags: ["filtru","condensator","riplu","stabilizator","zener","paralel","serie","tranzistor","beta","78XX","79XX","regulator","Vout","protectie scurtcircuit","protectie termica","reactie negativa","randament","referinta"],
+    tags: ["filtru","condensator","riplu","stabilizator","zener","paralel","serie","beta","78XX","79XX","regulator","Vout","protectie scurtcircuit","protectie termica","reactie negativa","randament","referinta"],
     content: "### Filtrul cu condensator\n\nCondensatorul se încarcă pe durata alternanței de vârf și se descarcă lent prin rezistența de sarcină în intervalul de gol. Variația de tensiune (riplul):\n\n$$\\Delta v_0 \\approx \\frac{V_0 T}{R_L C}$$\n\n### Stabilizator paralel (Zener)\n\nElementul activ (Dioda Zener) în **paralel** cu sarcina. $R$ de limitare preia restul tensiunii. Randament slab.\n\n### Stabilizator serie (cu tranzistor)\n\nTranzistorul în **serie** cu sarcina. Tensiunea de referință (Zener) aplicată în baza tranzistorului. Amplificarea $\\beta$ permite curenți mari pe ieșire:\n\n$$V_{OUT} = V_{Zener} - 0{,}65\\,V$$\n\nNecesită circuit de **protecție la scurtcircuit**.\n\n### Stabilizatoare integrate\n\n- **78XX** → tensiune pozitivă (ex. 7805 = +5V, 7812 = +12V)\n- **79XX** → tensiune negativă\n- Conțin protecție termică și la scurtcircuit."
   },
 
