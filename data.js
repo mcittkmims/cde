@@ -70,7 +70,7 @@ b. $R = 0{,}5 + 1200 + 50 + 20 + 0{,}8 = \\boxed{1271{,}3\\,[k\\Omega]}$
     type: "problem",
     theme: "TEMA 2",
     themeTitle: "Legea lui Ohm – Curent continuu și alternativ",
-    title: "Curent prin rezistor – CC și CA",
+    title: "Curent prin rezistor – Curent Continuu (CC) și Curent Alternativ (CA)",
     tags: ["ohm", "rezistor", "curent", "tensiune", "continuu", "alternativ", "sinusoidal", "gol", "infinit", "mA", "kΩ", "V/kΩ"],
     content: `**Enunț:** $R = 10\\,[k\\Omega]$. Să se determine curentul dacă:
 
@@ -626,7 +626,7 @@ $$I_{D2} = I_{D1}-I = 3{,}96-0{,}2 = \\boxed{3{,}76\\,[mA]}$$`
     type: "theory",
     theme: "TEORIE",
     themeTitle: "Tranzistoare Bipolare (BJT)",
-    title: "Regimurile de funcționare BJT – RAN, Saturație, Blocat, RAI",
+    title: "Regimurile de funcționare ale Tranzistorului Bipolar (BJT) – Activ Normal, Saturație, Blocat, Activ Invers",
     tags: ["BJT","regim activ normal","RAN","saturatie","RS","blocat","RB","regim activ invers","RAI","intreruptor inchis","intreruptor deschis","amplificare","UCEsat","jonctiune EB","jonctiune BC","polarizare directa","polarizare inversa"],
     content: "Starea tranzistorului este determinată de polarizarea celor două joncțiuni:\n\n| Regim | Jonc. EB | Jonc. BC | Comportament |\n|---|---|---|---|\n| **Activ Normal (RAN)** | Directă | Inversă | Amplificare: $I_C \\approx \\beta I_B$ |\n| **Saturație (RS)** | Directă | Directă | Întrerupător **închis**, $U_{CEsat} \\approx 0{,}1{-}0{,}2\\,V$ |\n| **Blocat (RB)** | Inversă | Inversă | Întrerupător **deschis**, $I_C \\approx 0$ |\n| **Activ Invers (RAI)** | Inversă | Directă | Neutilizat practic ($\\beta$ extrem de mic) |\n\n> **RAN** = zona de amplificare. **RS** și **RB** = comutație digitală (0/1).\n\nÎn **Regimul de Saturație**, curentul este limitat doar de circuitul extern; tensiunea $U_{CEsat}$ este foarte mică.\n\nÎn **Regimul Blocat**, prin tranzistor circulă doar un curent rezidual extrem de mic."
   },
@@ -636,7 +636,7 @@ $$I_{D2} = I_{D1}-I = 3{,}96-0{,}2 = \\boxed{3{,}76\\,[mA]}$$`
     type: "theory",
     theme: "TEORIE",
     themeTitle: "Tranzistoare Bipolare (BJT)",
-    title: "Polarizare BJT – PSF, dreapta de sarcină, stabilizare termică cu RE",
+    title: "Polarizarea Tranzistorului Bipolar (BJT) – Punctul Static de Funcționare (PSF), dreapta de sarcină, stabilizare termică",
     tags: ["BJT","PSF","punct static de functionare","dreapta de sarcina","polarizare","R1 R2 RC RE","stabilizare termica","ambalare termica","ICBo","divizor tensiune baza","VB","UBE","reactie negativa","temperatura"],
     content: "### Polarizarea cu 4 rezistoare ($R_1, R_2, R_C, R_E$)\n\n$R_1$ și $R_2$ formează un **divizor de tensiune** care fixează potențialul bazei $V_B$ stabil față de variații.\n\n### Dreapta de sarcină DC\n\n$$I_C = -\\frac{U_{CE}}{R_C + R_E} + \\frac{E_C}{R_C + R_E}$$\n\n**PSF (Punctul Static de Funcționare)** = intersecția dreptei de sarcină cu caracteristica $I_C(U_{CE})$.\n\n### Problema ambalării termice\n\nTemperatură ↑ → $I_{CBo}$ ↑ → $I_C$ ↑ → disipație ↑ → temperatură ↑ (buclă pozitivă — distructivă)\n\n### Stabilizarea termică cu $R_E$ (reacție negativă)\n\nDacă $I_E$ ($\\approx I_C$) crește → căderea $I_E R_E$ crește → $U_{BE} = V_B - I_E R_E$ scade → $I_C$ scade. Compensare automată."
   },
@@ -646,7 +646,7 @@ $$I_{D2} = I_{D1}-I = 3{,}96-0{,}2 = \\boxed{3{,}76\\,[mA]}$$`
     type: "theory",
     theme: "TEORIE",
     themeTitle: "Tranzistoare Bipolare (BJT)",
-    title: "Parametrii hibrizi h – model semnal mic (Emitor Comun)",
+    title: "Parametrii hibrizi h ai BJT – model semnal mic în configurație Emitor Comun",
     tags: ["BJT","parametri hibrizi","h11","h12","h21","h22","semnal mic","emitor comun","EC","cuadripol","impedanta intrare","transfer tensiune","amplificare dinamica","admitanta iesire","beta ac","model liniar"],
     content: "Pentru semnale mici (comportament liniar), tranzistorul este modelat ca un **cuadripol**. Parametrii hibrizi pentru **Emitor Comun**:\n\n$$\\Delta u_{be} = h_{11}\\,\\Delta i_b + h_{12}\\,\\Delta u_{ce}$$\n$$\\Delta i_c = h_{21}\\,\\Delta i_b + h_{22}\\,\\Delta u_{ce}$$\n\n| Parametru | Semnificație | Valoare tipică |\n|---|---|---|\n| $h_{11}$ | Impedanța de intrare | sute $\\Omega$ – $k\\Omega$ |\n| $h_{12}$ | Factorul de transfer invers în tensiune | $10^{-3}{-}10^{-4}$ |\n| $h_{21}$ | Amplificare dinamică în curent ($\\beta_{ac}$), ieșire în scurtcircuit | 10–100 |\n| $h_{22}$ | Admitanța de ieșire cu intrarea în gol | $\\mu S$ |"
   },
