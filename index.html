@@ -187,9 +187,23 @@
 
     .card-title {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      min-width: 0;
+    }
+    .card-title-text {
       font-size: 0.95rem;
       font-weight: 600;
       line-height: 1.3;
+    }
+    .card-subtitle {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .card-title .highlight, .card-body .highlight {
@@ -337,7 +351,7 @@
   <div id="results"></div>
 </main>
 
-<script src="data.js?v=4"></script>
+<script src="data.js?v=5"></script>
 <script>
 // ── State ──────────────────────────────────────────────────────────
 let query = '';
@@ -386,9 +400,14 @@ function editDistance(a, b) {
 }
 
 // Check if a term matches a haystack string, returns match quality:
-//  2 = exact substring, 1 = fuzzy (1-2 edits on a word), 0 = no match
+//  2 = whole-word substring match, 1 = compound-word or fuzzy, 0 = no match
 function termScore(term, haystack) {
-  if (haystack.includes(term)) return 2;
+  const idx = haystack.indexOf(term);
+  if (idx !== -1) {
+    const before = idx === 0 || !/[a-z0-9]/.test(haystack[idx - 1]);
+    const after  = idx + term.length >= haystack.length || !/[a-z0-9]/.test(haystack[idx + term.length]);
+    return (before && after) ? 2 : 1;
+  }
   // Fuzzy: only for terms >= 4 chars — check each word in haystack
   if (term.length >= 4) {
     const words = haystack.split(/[\s,.()\[\]{}$\\\/\-_|:;]+/).filter(w => w.length >= 3);
@@ -519,7 +538,10 @@ function render() {
           <span class="badge badge-${e.type}">${e.type === 'problem' ? 'Problemă' : 'Teorie'}</span>
           ${e.theme !== 'TEORIE' ? `<span class="badge ${themeBadgeClass(e.theme)}">${e.theme}</span>` : ''}
         </div>
-        <div class="card-title">${highlightTitle(e.title)}</div>
+        <div class="card-title">
+          <div class="card-title-text">${highlightTitle(e.title)}</div>
+          <div class="card-subtitle">${escHtml(e.themeTitle)}</div>
+        </div>
         <svg class="card-chevron" width="16" height="16" viewBox="0 0 24 24"
           fill="none" stroke="currentColor" stroke-width="2.5">
           <polyline points="6 9 12 15 18 9"/>
