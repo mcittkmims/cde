@@ -507,27 +507,8 @@ $$I_{D2} = I_{D1}-I = 3{,}96-0{,}2 = \\boxed{3{,}76\\,[mA]}$$`
     theme: "TEORIE",
     themeTitle: "Baze și Componente Electronice Pasive",
     title: "Noțiuni introductive – circuit electric, semnale, RMS",
-    tags: ["circuit electric", "activ", "pasiv", "integrat", "semnal", "RMS", "valoare efectiva", "valoare medie", "instantanee", "putere", "curent", "tensiune", "dq/dt"],
-    content: `**Circuitul electric** = succesiune de medii conductoare prin care circulă curent electric, caracterizat de rezistență, inductivitate și capacitate.
-
-- **Circuit activ** – conține cel puțin un element activ (sursă de energie).
-- **Circuit pasiv** – nu conține nicio sursă de energie.
-- **Circuit integrat** – grup de elemente conectate inseparabil; poate fi **analogic** (ieșire continuă) sau **numeric** (binar, 0 și 1).
-
-### Intensitatea curentului electric
-
-$$I(t) = \\frac{dq}{dt}$$
-
-### Parametrii semnalelor alternative
-
-| Parametru | Formulă |
-|---|---|
-| Valoare instantanee | $x(t) = X\\sqrt{2}\\sin(\\omega t \\pm \\varphi)$ |
-| Valoare medie | $X_{med} = \\dfrac{1}{T}\\int_0^T x(t)\\,dt$ |
-| Valoare efectivă (RMS) | $X = \\sqrt{\\dfrac{1}{T}\\int_0^T x^2(t)\\,dt}$ |
-| Putere medie | $P_{med} = \\dfrac{1}{T}\\int_0^T u(t)i(t)\\,dt$ |
-
-> **RMS** reprezintă **0,707** din valoarea de vârf pentru curent alternativ sinusoidal.`
+    tags: ["circuit electric","activ","pasiv","integrat","analogic","numeric","semnal","RMS","valoare efectiva","valoare medie","valoare instantanee","valoare de varf","putere electrica","curent","tensiune","sarcina electrica","dq/dt","frecventa","pulsatie","omega","faza"],
+    content: "**Circuitul electric** reprezintă o succesiune de medii conductoare prin care circulă curent electric, caracterizat de parametri de circuit precum rezistența, inductivitatea și capacitatea.\n\n- **Circuit activ:** Conține cel puțin un element activ.\n- **Circuit pasiv:** Nu conține nicio sursă de energie.\n- **Circuit integrat:** Grup de elemente electronice conectate inseparabil, capabil să îndeplinească una sau mai multe funcții. Poate fi **analogic** (mărimea de ieșire variază continuu) sau **numeric** (funcționează în cod binar, cu nivele 0 și 1).\n\nIntensitatea curentului electric într-un punct al unui conductor este, prin definiție, debitul de sarcină electrică transportată prin acel punct:\n\n$$I(t) = \\frac{dq}{dt}$$\n\n### Parametrii semnalelor alternative\n\n- **Valoarea instantanee:** $x(t) = X\\sqrt{2}\\sin(\\omega t \\pm \\varphi)$\n- **Valoarea medie pe o perioadă:** $X_{med} = \\dfrac{1}{T} \\int_0^T x(t)\\,dt$\n- **Valoarea efectivă (RMS):** $X = \\sqrt{\\dfrac{1}{T} \\int_0^T x(t)^2\\,dt}$ — reprezintă **0,707** din valoarea de vârf pentru curent alternativ sinusoidal.\n- **Puterea electrică medie:** $P_{med} = \\dfrac{1}{T}\\int_0^T u(t)i(t)\\,dt$"
   },
 
   {
@@ -536,32 +517,8 @@ $$I(t) = \\frac{dq}{dt}$$
     theme: "TEORIE",
     themeTitle: "Baze și Componente Electronice Pasive",
     title: "Legea lui Ohm – pe porțiune și pe întreg circuitul",
-    tags: ["ohm", "lege", "rezistenta", "tensiune", "curent", "V=RI", "tensiune electromotoare", "scurtcircuit", "rezistenta interna", "r", "E"],
-    content: `### Legea lui Ohm pe o porțiune de circuit
-
-$$I = \\frac{U}{R}$$
-
-### Legea lui Ohm pe întreg circuitul
-
-$$E = I(R + r) \\implies U = E - rI$$
-
-unde $r$ = rezistența internă a generatorului, $E$ = tensiunea electromotoare.
-
-### Curentul de scurtcircuit
-
-Apare când rezistența exterioară $R = 0$:
-
-$$I_{sc} = \\frac{E}{r}$$
-
-Este curentul maxim furnizat de generator.
-
-### Reguli practice de calcul
-
-| | Rezultat |
-|---|---|
-| $[V] / [k\\Omega]$ | $= [mA]$ |
-| $[V] / [M\\Omega]$ | $= [\\mu A]$ |
-| $[mV] / [\\Omega]$ | $= [mA]$ |`
+    tags: ["ohm","lege","rezistenta","tensiune","curent","tensiune electromotoare","E","rezistenta interna","r","scurtcircuit","curent scurtcircuit","Isc","U=E-rI"],
+    content: "**Legea lui Ohm pe o porțiune de circuit:** Intensitatea curentului este proporțională cu tensiunea aplicată pe acea porțiune și invers proporțională cu rezistența electrică:\n\n$$I = \\frac{U}{R}$$\n\n**Legea lui Ohm pe întregul circuit:** Intensitatea curentului printr-un circuit închis este direct proporțională cu tensiunea electromotoare $E$ și invers proporțională cu rezistența totală:\n\n$$E = I(R + r) \\implies U = E - rI$$\n\n**Curentul de scurtcircuit** apare când rezistența exterioară devine nulă, fiind curentul maxim furnizat de generator:\n\n$$I_{sc} = \\frac{E}{r}$$\n\n### Reguli practice de calcul\n\n| | Rezultat |\n|---|---|\n| $[V] / [k\\Omega]$ | $= [mA]$ |\n| $[V] / [M\\Omega]$ | $= [\\mu A]$ |\n| $[mV] / [\\Omega]$ | $= [mA]$ |"
   },
 
   {
@@ -570,23 +527,8 @@ Este curentul maxim furnizat de generator.
     theme: "TEORIE",
     themeTitle: "Baze și Componente Electronice Pasive",
     title: "Legile lui Kirchhoff (KCL și KVL)",
-    tags: ["kirchhoff", "KCL", "KVL", "nod", "bucla", "ochi", "suma curenti", "suma tensiuni", "lege"],
-    content: `### KCL – Prima lege (noduri)
-
-Suma algebrică a curenților într-un nod este zero:
-
-$$\\sum I_k = 0$$
-
-### KVL – A doua lege (ochiuri / bucle)
-
-Suma algebrică a tensiunilor electromotoare = suma căderilor de tensiune:
-
-$$\\sum E_k = \\sum R_k I_k$$
-
-**Convenție de semn (KVL):**
-- Se alege un sens de parcurgere al buclei.
-- Sursă: $+E$ dacă parcurgi de la $-$ la $+$; $-E$ în sens invers.
-- Rezistor: $+RI$ dacă sensul curentului coincide cu sensul de parcurgere.`
+    tags: ["kirchhoff","KCL","KVL","nod","bucla","ochi","retea","suma curentilor","suma tensiunilor","cadere tensiune","tensiune electromotoare"],
+    content: "**Prima lege a lui Kirchhoff (pentru noduri):** Suma algebrică a intensităților curenților electrici care se întâlnesc într-un nod de rețea este egală cu zero:\n\n$$\\sum I_k = 0$$\n\n**A doua lege a lui Kirchhoff (pentru ochiuri):** Suma algebrică a tensiunilor electromotoare dintr-un ochi de rețea este egală cu suma algebrică a căderilor de tensiune pe rezistorii din acel ochi:\n\n$$\\sum E_k = \\sum R_k I_k$$\n\n### Convenție de semn (KVL)\n- Se alege un sens de parcurgere al buclei (ex. orar).\n- Sursă: $+E$ dacă parcurgi de la $-$ la $+$; $-E$ în sens invers.\n- Rezistor: $+RI$ dacă sensul curentului coincide cu sensul de parcurgere."
   },
 
   {
@@ -594,29 +536,9 @@ $$\\sum E_k = \\sum R_k I_k$$
     type: "theory",
     theme: "TEORIE",
     themeTitle: "Baze și Componente Electronice Pasive",
-    title: "Rezistoare – proprietăți, serie, paralel, putere",
-    tags: ["rezistor", "rezistenta", "ohm", "serie", "paralel", "divizor tensiune", "divizor curent", "putere", "efect joule", "toleranta", "coeficient temperatura"],
-    content: `**Rezistorul** se opune trecerii curentului. Rezistența unui conductor:
-
-$$R = \\rho \\frac{l}{S}$$
-
-### Puterea disipată (efect Joule)
-
-$$P = U \\cdot I = R \\cdot I^2 = \\frac{U^2}{R}$$
-
-### Conectarea în serie – Divizor de tensiune
-
-$$R_{ech} = R_1 + R_2, \\qquad U_1 = U \\cdot \\frac{R_1}{R_1 + R_2}$$
-
-### Conectarea în paralel – Divizor de curent
-
-$$R_{ech} = \\frac{R_1 R_2}{R_1 + R_2}, \\qquad I_1 = I \\cdot \\frac{R_2}{R_1 + R_2}$$
-
-### Parametri importanți
-- **Rezistența nominală** $R_N$
-- **Toleranța** $t = \\pm\\dfrac{\\max|R-R_N|}{R_N}\\cdot100\\%$
-- **Puterea nominală** $P_n$
-- **Tensiunea nominală limită** $U_{n\\,lim} = \\sqrt{P_n R_N}$`
+    title: "Rezistoare – rezistivitate, serie, paralel, putere, parametri",
+    tags: ["rezistor","rezistenta electrica","rezistivitate","rho","ohm","serie","paralel","divizor tensiune","divizor curent","putere","efect joule","toleranta","coeficient temperatura","putere nominala","tensiune nominala","Pn","RN"],
+    content: "**Rezistorul** este o componentă de circuit a cărei proprietate principală este **rezistența electrică** (măsurată în Ohmi, $\\Omega$), ce reprezintă fenomenul de opunere la trecerea curentului.\n\nPentru un conductor de lungime $l$, secțiune $S$ și rezistivitate $\\rho$, rezistența este:\n\n$$R = \\rho \\frac{l}{S}$$\n\nPuterea electrică disipată se transformă în căldură prin **efect Joule**:\n\n$$P = U \\cdot I = R \\cdot I^2 = \\frac{U^2}{R}$$\n\n### Conectarea în serie – Divizor de tensiune\n\n$$R_{ech} = R_1 + R_2, \\qquad U_1 = U \\cdot \\frac{R_1}{R_1 + R_2}$$\n\nCurentul este **același** prin toate rezistoarele. Tensiunea se împarte proporțional cu $R$.\n\n### Conectarea în paralel – Divizor de curent\n\n$$R_{ech} = \\frac{R_1 R_2}{R_1 + R_2}, \\qquad I_1 = I \\cdot \\frac{R_2}{R_1 + R_2}$$\n\nTensiunea este **aceeași** pe toate. Curentul se împarte invers proporțional cu $R$. $R_{ech} < \\min(R_1, R_2)$.\n\n### Parametri importanți\n- **Rezistența nominală** $R_N$\n- **Toleranța** $t = \\pm\\dfrac{\\max|R - R_N|}{R_N} \\cdot 100\\%$\n- **Puterea disipată nominală** $P_n$\n- **Tensiunea nominală limită** $U_{n\\,lim} = \\sqrt{P_n R_N}$\n- **Coeficientul de temperatură** al rezistenței (variația rezistenței cu temperatura)"
   },
 
   {
@@ -624,27 +546,9 @@ $$R_{ech} = \\frac{R_1 R_2}{R_1 + R_2}, \\qquad I_1 = I \\cdot \\frac{R_2}{R_1 +
     type: "theory",
     theme: "TEORIE",
     themeTitle: "Baze și Componente Electronice Pasive",
-    title: "Condensatoare – capacitate, serie, paralel, reactanță",
-    tags: ["condensator", "capacitate", "farad", "dielectric", "armatura", "energie", "reactanta capacitiva", "XC", "serie", "paralel", "curent continuu", "intrerupere circuit", "CC"],
-    content: `**Condensatorul** = două conductoare (armături) despărțite de un dielectric.
-
-$$Q = C \\cdot U, \\qquad C = \\varepsilon \\frac{S}{d}$$
-
-### Energie înmagazinată
-
-$$W = \\frac{1}{2} C U^2$$
-
-### Conectare
-
-| | Serie | Paralel |
-|---|---|---|
-| $C_{ech}$ | $\\dfrac{C_1 C_2}{C_1+C_2}$ | $C_1 + C_2$ |
-
-### Regim variabil
-
-$$X_C = \\frac{1}{\\omega C}, \\qquad Z_C = R - jX_C$$
-
-> **În curent continuu** ($\\omega = 0$): $X_C \\to \\infty$ → condensatorul este echivalent cu o **întrerupere de circuit** (gol).`
+    title: "Condensatoare – capacitate, câmp electric, reactanță capacitivă",
+    tags: ["condensator","capacitate","farad","F","dielectric","armatura","energie electrica","camp electric","reactanta capacitiva","XC","impedanta","ZC","serie","paralel","curent continuu","intrerupere circuit","gol","Q=CU","epsilon"],
+    content: "**Condensatorul** este un sistem de două conductoare (armături) despărțite de un dielectric. Se caracterizează prin **capacitate** ($C$, măsurată în Farazi, $F$):\n\n$$Q = C \\cdot U, \\qquad C = \\varepsilon \\frac{S}{d}$$\n\nCondensatorul înmagazinează energia câmpului electric:\n\n$$W = \\frac{1}{2} C U^2$$\n\n### Conectare\n\n- **Serie:** $C_{ech} = \\dfrac{C_1 C_2}{C_1 + C_2}$\n- **Paralel:** $C_{ech} = C_1 + C_2$\n\n### Comportament în regim variabil\n\nReactanța capacitivă: $X_C = \\dfrac{1}{\\omega C}$\n\nImpedanța: $Z_C = R - jX_C$\n\n> **În curent continuu** ($\\omega = 0$): $X_C \\to \\infty$ → condensatorul este echivalent cu o **întrerupere de circuit (gol)**."
   },
 
   {
@@ -652,27 +556,9 @@ $$X_C = \\frac{1}{\\omega C}, \\qquad Z_C = R - jX_C$$
     type: "theory",
     theme: "TEORIE",
     themeTitle: "Baze și Componente Electronice Pasive",
-    title: "Bobine – inductanță, serie, paralel, reactanță",
-    tags: ["bobina", "inductanta", "henry", "H", "energie magnetica", "reactanta inductiva", "XL", "serie", "paralel", "curent continuu", "scurtcircuit", "uL=L*di/dt"],
-    content: `**Bobina** se opune variației curentului și acumulează energie magnetică.
-
-$$u_L(t) = L \\frac{di_L(t)}{dt}, \\qquad L = \\frac{\\Phi(t)}{i(t)}$$
-
-### Energie înmagazinată
-
-$$W_L = \\frac{L I^2}{2}$$
-
-### Conectare
-
-| | Serie | Paralel |
-|---|---|---|
-| $L_{ech}$ | $L_1 + L_2$ | $\\dfrac{L_1 L_2}{L_1+L_2}$ |
-
-### Regim variabil
-
-$$X_L = \\omega L$$
-
-> **În curent continuu** ($\\omega = 0$): $X_L = 0$ → bobina ideală este echivalentă cu un **scurtcircuit**.`
+    title: "Bobine – inductanță, câmp magnetic, reactanță inductivă",
+    tags: ["bobina","inductanta","henry","H","flux magnetic","energie magnetica","reactanta inductiva","XL","impedanta","serie","paralel","curent continuu","scurtcircuit","uL=L*di/dt","opozitie variatie curent"],
+    content: "**Bobina** este o componentă caracterizată de **inductanță** ($L$, măsurată în Henry, $H$). Ea are proprietatea de a se opune variației curentului electric și de a acumula energie magnetică:\n\n$$u_L(t) = L \\frac{di_L(t)}{dt}, \\qquad L = \\frac{\\Phi(t)}{i(t)}$$\n\nEnergie magnetică acumulată:\n\n$$W_L = \\frac{L I^2}{2}$$\n\n### Conectare\n\n- **Serie:** $L_{ech} = L_1 + L_2$\n- **Paralel:** $L_{ech} = \\dfrac{L_1 L_2}{L_1 + L_2}$\n\n### Comportament în regim variabil\n\nReactanța inductivă: $X_L = \\omega L$\n\n> **În curent continuu** ($\\omega = 0$): $X_L = 0$ → bobina ideală este echivalentă cu un **scurtcircuit**."
   },
 
   {
@@ -680,22 +566,9 @@ $$X_L = \\omega L$$
     type: "theory",
     theme: "TEORIE",
     themeTitle: "Joncțiunea p-n și Diode Semiconductoare",
-    title: "Semiconductoare – intrinsec, tip N, tip P, benzi de energie",
-    tags: ["semiconductor", "intrinsec", "tip N", "tip P", "donori", "acceptori", "banda valenta", "banda conductie", "banda interzisa", "electroni", "goluri", "purtatori"],
-    content: `Semiconductorii au conductibilitate între izolatori și conductoare, asigurată de **electroni** și **goluri**.
-
-### Benzi de energie
-- **Banda de valență** – energii permise electronilor de valență
-- **Banda de conducție** – energii permise electronilor liberi
-- **Banda interzisă** – lățime 0,1–3 eV (determină tipul materialului)
-
-### Tipuri
-
-| Tip | Caracteristică | Purtători majoritari |
-|---|---|---|
-| **Intrinsec** | Fără impurități, $p_0 = n_0 = n_i$ | egali |
-| **Tip N** | Impurități donoare (pentavalente) | electroni |
-| **Tip P** | Impurități acceptoare (trivalente) | goluri |`
+    title: "Materiale semiconductoare – intrinsec, tip N, tip P, benzi de energie",
+    tags: ["semiconductor","intrinsec","tip N","tip P","donori","pentavalent","acceptori","trivalent","banda valenta","banda conductie","banda interzisa","electroni","goluri","purtatori majoritari","purtatori minoritari","eV","dopare","impuritati"],
+    content: "Semiconductorii posedă conductibilitate plasată între cea a izolatorilor și a conductoarelor, asigurată atât de **electroni** cât și de **goluri**.\n\n### Benzile de energie\n\nComportamentul electric este determinat de structura energetică:\n- **Banda de valență** – energii permise electronilor de valență\n- **Banda de conducție** – energii permise electronilor liberi\n- **Banda interzisă** – lățime între 0,1 eV și 3 eV\n\n### Tipuri de semiconductoare\n\n| Tip | Caracteristică | Purtători majoritari | Purtători minoritari |\n|---|---|---|---|\n| **Intrinsec** | Fără impurități, $p_0 = n_0 = n_i$ | egali | egali |\n| **Extrinsec tip N** | Impurități donoare pentavalente | electroni | goluri |\n| **Extrinsec tip P** | Impurități acceptoare trivalente | goluri | electroni |"
   },
 
   {
@@ -703,23 +576,9 @@ $$X_L = \\omega L$$
     type: "theory",
     theme: "TEORIE",
     themeTitle: "Joncțiunea p-n și Diode Semiconductoare",
-    title: "Joncțiunea p-n – polarizare directă și inversă",
-    tags: ["jonctiune pn", "dioda", "anod", "catod", "polarizare directa", "polarizare inversa", "bariera potential", "curent saturatie", "IS", "0.6V", "0.3V", "siliciu", "germaniu", "temperatura"],
-    content: `La contactul zonelor p și n se formează o **regiune de trecere (sărăcită)** și o **barieră de potențial**.
-
-### Polarizare inversă ($u_d < 0$)
-Bariera crește, purtătorii majoritari sunt blocați. Apare doar curentul de saturație $I_S$:
-$$i_d \\cong -I_S$$
-
-### Polarizare directă ($u_d > 0$)
-Câmpul extern anulează bariera, trecerea curentului este exponențială:
-$$i_d \\cong I_S e^{\\frac{q\\,u_d}{kT}}$$
-
-Tensiunea de deschidere: **0,6 V** (Si) | **0,3 V** (Ge)
-
-### Efectul temperaturii
-- $I_S$ se **dublează** la fiecare +6°C (Si) sau +9°C (Ge)
-- Tensiunea la curent constant **scade cu 2 mV/°C**`
+    title: "Joncțiunea p-n – barieră de potențial, polarizare directă și inversă",
+    tags: ["jonctiune pn","dioda","anod","catod","polarizare directa","polarizare inversa","bariera de potential","regiune de trecere","regiune saracita","difuzie","curent saturatie","IS","0.6V","0.3V","siliciu","germaniu","temperatura","purtatori majoritari","purtatori minoritari"],
+    content: "Dioda semiconductoare este formată dintr-o **joncțiune p-n** cu două contacte: **Anod (+)** și **Catod (-)**.\n\nPrin contactul zonelor p și n, difuzia purtătorilor formează o **regiune de trecere (sărăcită)** și un câmp electric intern care se opune difuziei ulterioare, creând o **barieră de potențial**.\n\n### Polarizarea inversă ($u_d < 0$)\n\nBariera de potențial crește, curgerea purtătorilor majoritari este blocată. Apare doar un curent foarte mic (de saturație, $I_S$) format din purtători minoritari:\n\n$$i_d \\cong -I_S$$\n\n### Polarizarea directă ($u_d > 0$)\n\nCâmpul extern anulează bariera de potențial, permițând trecerea exponențială a curentului:\n\n$$i_d \\cong I_S e^{\\frac{q\\,u_d}{kT}}$$\n\nTensiunea de deschidere: **0,6 V** (Si) | **0,3 V** (Ge)\n\n### Efectul temperaturii\n\n- Curentul invers $I_S$ se **dublează** la fiecare +6°C (Si) și +9°C (Ge)\n- Tensiunea la curent constant **scade cu 2 mV/°C**"
   },
 
   {
@@ -727,16 +586,9 @@ Tensiunea de deschidere: **0,6 V** (Si) | **0,3 V** (Ge)
     type: "theory",
     theme: "TEORIE",
     themeTitle: "Joncțiunea p-n și Diode Semiconductoare",
-    title: "Tipuri de diode – Zener, Schottky, Varicap, Tunel, LED, Fotodiodă",
-    tags: ["zener", "schottky", "varicap", "tunel", "LED", "fotodioda", "stabilizatoare", "avalansa", "UZ", "comutatie rapida", "capacitate variabila", "efect fotovoltaic", "lumina", "dioda"],
-    content: `| Tip | Principiu | Utilizare |
-|---|---|---|
-| **Zener** | Avalanșă/efect Zener în polarizare inversă, $U_Z$ constant | Stabilizare tensiune |
-| **Schottky** | Joncțiune metal–semiconductor (unipolar) | Comutație rapidă, $V_f = 0{,}2{-}0{,}45\\,V$ |
-| **Varicap** | Capacitate variabilă: $C_b = \\dfrac{C_{b0}}{(1+U_{KA}/U_0)^2}$ | Oscilatoare, filtre de acord |
-| **Tunel** | Rezistență diferențială negativă (efect tunel) | Oscilatoare înaltă frecvență |
-| **Fotodiodă** | Fotonii generează perechi e⁻–gol (efect fotovoltaic) | Senzori de lumină |
-| **LED** | Recombinare e⁻–gol → fotoni (polarizare directă) | Iluminare, afișaje |`
+    title: "Tipuri de diode – Zener, Schottky, Varicap, Tunel, Fotodiodă, LED",
+    tags: ["zener","schottky","varicap","tunel","LED","fotodioda","stabilizatoare","avalansa","UZ","comutatie rapida","timp recuperare","capacitate variabila","efect fotovoltaic","efect tunel","rezistenta diferentiala negativa","lumina","fotoni","recombinare","metal-semiconductor","unipolar"],
+    content: "### Dioda Zener (Stabilizatoare)\n\nFuncționează în **polarizare inversă**. La o anumită valoare a tensiunii, curentul crește masiv (prin efect de avalanșă sau efect Zener), în timp ce tensiunea $U_Z$ rămâne constantă. Folosită pentru **stabilizarea tensiunii**.\n\n### Dioda Schottky\n\nFolosește o joncțiune **metal-semiconductor** (dispozitiv unipolar). Oferă viteză de comutație extrem de mare (timp de recuperare practic zero) și cădere de tensiune directă foarte mică (0,2–0,45 V). Curent invers mai mare; tensiune inversă nominală mai redusă.\n\n### Dioda Varicap\n\nFuncționează ca o **capacitate variabilă** controlată de tensiunea de polarizare inversă:\n\n$$C_b = \\frac{C_{b0}}{(1 + U_{KA}/U_0)^2}$$\n\nUtilă în oscilatoare și filtre de acord.\n\n### Dioda Tunel\n\nPrezintă o regiune de **rezistență diferențială negativă** datorită efectului tunel. Utilizată în oscilatoare de înaltă frecvență.\n\n### Fotodioda\n\nFuncționează în **polarizare inversă**. Fotonii absorbți generează perechi electron-gol (**efect fotovoltaic**), formând un curent proporțional cu fluxul luminos incident.\n\n### LED (Diodă Emițătoare de Lumină)\n\nFuncționează în **polarizare directă**. Recombinarea electronilor cu golurile eliberează **fotoni** (lumină)."
   },
 
   {
@@ -744,19 +596,9 @@ Tensiunea de deschidere: **0,6 V** (Si) | **0,3 V** (Ge)
     type: "theory",
     theme: "TEORIE",
     themeTitle: "Surse de Alimentare și Redresoare",
-    title: "Redresoare – monoalternanță, bialternanță, punte",
-    tags: ["redresor", "monoalternanta", "bialternanta", "punte", "riplu", "gamma", "eficienta", "V0", "transformator", "dioda", "alimentator", "CC"],
-    content: `Structura unui alimentator: **Transformator → Redresor → Filtru → Stabilizator**
-
-### Comparație redresoare
-
-| Tip | $V_0$ | Riplu $\\gamma$ | Eficiență $\\eta$ |
-|---|---|---|---|
-| **Monoalternanță** | $\\dfrac{\\sqrt{2}\\,V_2}{\\pi}$ | ≈ 1,57 | ≈ 40,5% |
-| **Bialternanță** (priză mediană) | $\\dfrac{2\\sqrt{2}\\,V_2}{\\pi}$ | ≈ 1,11 | ≈ 81% |
-| **Punte** (4 diode) | $\\dfrac{2\\sqrt{2}\\,V_2}{\\pi}$ | ≈ 1,11 | ≈ 81% |
-
-> Puntea nu necesită transformator cu priză mediană, dar introduce căderea de tensiune pe **2 diode** per alternanță.`
+    title: "Redresoare – monoalternanță, bialternanță, punte Graetz",
+    tags: ["redresor","monoalternanta","bialternanta","punte","punte graetz","riplu","factor de unda","gamma","eficienta","eta","V0","tensiune medie","tensiune efectiva","transformator","priza mediana","alimentator","curent continuu","CC"],
+    content: "Structura tipică a unui alimentator de curent continuu: **Transformator → Redresor → Filtru → Stabilizator**\n\n### Redresor monoalternanță\n\nPermite trecerea doar a unei singure alternanțe.\n\n- Tensiunea medie de ieșire: $V_0 \\approx \\dfrac{\\sqrt{2}\\,V_2}{\\pi}$\n- Tensiunea efectivă de ieșire: $V_{oef} \\approx \\dfrac{\\sqrt{2}\\,V_2}{2}$\n- Factorul de undă (Riplu): $\\gamma \\approx 1{,}57$\n- Eficiența: $\\eta \\approx 40{,}5\\%$\n\n### Redresor bialternanță cu priză mediană\n\nUtilizează un transformator cu secundar dublu identic și 2 diode.\n\n- $V_0 \\approx \\dfrac{2\\sqrt{2}\\,V_2}{\\pi}$\n- $\\gamma \\approx 1{,}11$\n- $\\eta \\approx 81\\%$\n\n### Redresorul în punte (Graetz)\n\nFolosește **4 diode**, redresează complet unda fără a necesita transformator cu priză mediană, dar introduce o cădere de tensiune pe **2 diode** per alternanță."
   },
 
   {
@@ -764,28 +606,9 @@ Tensiunea de deschidere: **0,6 V** (Si) | **0,3 V** (Ge)
     type: "theory",
     theme: "TEORIE",
     themeTitle: "Surse de Alimentare și Redresoare",
-    title: "Filtre și stabilizatoare – Zener, serie, integrate 78XX/79XX",
-    tags: ["filtru", "condensator", "riplu", "stabilizator", "zener", "paralel", "serie", "tranzistor", "beta", "78XX", "79XX", "regulator", "Vout", "protectie scurtcircuit"],
-    content: `### Filtrul cu condensator
-
-Condensatorul se încarcă la vârf și se descarcă lent prin sarcina $R_L$. Riplul rezidual:
-
-$$\\Delta v_0 \\approx \\frac{V_0 T}{R_L C}$$
-
-### Stabilizator paralel (Zener)
-- Zener în **paralel** cu sarcina; $R$ preia restul tensiunii.
-- Randament slab (curentul prin Zener este permanent).
-
-### Stabilizator serie (cu tranzistor)
-- Tranzistor în **serie** cu sarcina; Zener pe bază ca referință.
-- $V_{OUT} = V_{Zener} - 0{,}65\\,V$
-- Câștigul $\\beta$ permite curenți mari pe ieșire.
-- Necesită **protecție la scurtcircuit**.
-
-### Stabilizatoare integrate
-- **78XX** → tensiune pozitivă (ex. 7805 = +5V, 7812 = +12V)
-- **79XX** → tensiune negativă
-- Conțin protecție termică și la scurtcircuit.`
+    title: "Filtre și stabilizatoare – condensator, Zener, serie, 78XX/79XX",
+    tags: ["filtru","condensator","riplu","stabilizator","zener","paralel","serie","tranzistor","beta","78XX","79XX","regulator","Vout","protectie scurtcircuit","protectie termica","reactie negativa","randament","referinta"],
+    content: "### Filtrul cu condensator\n\nCondensatorul se încarcă pe durata alternanței de vârf și se descarcă lent prin rezistența de sarcină în intervalul de gol. Variația de tensiune (riplul):\n\n$$\\Delta v_0 \\approx \\frac{V_0 T}{R_L C}$$\n\n### Stabilizator paralel (Zener)\n\nElementul activ (Dioda Zener) în **paralel** cu sarcina. $R$ de limitare preia restul tensiunii. Randament slab.\n\n### Stabilizator serie (cu tranzistor)\n\nTranzistorul în **serie** cu sarcina. Tensiunea de referință (Zener) aplicată în baza tranzistorului. Amplificarea $\\beta$ permite curenți mari pe ieșire:\n\n$$V_{OUT} = V_{Zener} - 0{,}65\\,V$$\n\nNecesită circuit de **protecție la scurtcircuit**.\n\n### Stabilizatoare integrate\n\n- **78XX** → tensiune pozitivă (ex. 7805 = +5V, 7812 = +12V)\n- **79XX** → tensiune negativă\n- Conțin protecție termică și la scurtcircuit."
   },
 
   {
@@ -793,26 +616,9 @@ $$\\Delta v_0 \\approx \\frac{V_0 T}{R_L C}$$
     type: "theory",
     theme: "TEORIE",
     themeTitle: "Tranzistoare Bipolare (BJT)",
-    title: "BJT – structură, principiu, ecuații de curent (α, β)",
-    tags: ["tranzistor", "BJT", "bipolar", "NPN", "PNP", "emitor", "baza", "colector", "alfa", "beta", "IE=IC+IB", "amplificare", "curent"],
-    content: `**Tranzistorul bipolar (BJT)** are 3 terminale: **Emitor (E)**, **Bază (B)**, **Colector (C)**. Tipuri: NPN și PNP.
-
-### Ecuația curenților
-
-$$I_E = I_C + I_B$$
-
-### Parametrii de amplificare
-
-$$\\alpha = \\frac{I_C}{I_E} \\approx 0{,}97{-}0{,}99 \\qquad \\beta = \\frac{\\alpha}{1-\\alpha} \\approx 10{-}100$$
-
-$$I_C = \\alpha I_E + I_{CBo} \\approx \\beta I_B$$
-
-### Tipuri structurale
-
-| | NPN | PNP |
-|---|---|---|
-| Curent colector | intră în C | iese din C |
-| Polarizare $U_{BE}$ | $+0{,}6\\,V$ | $-0{,}6\\,V$ |`
+    title: "BJT – structură, principiu de funcționare, parametrii α și β",
+    tags: ["tranzistor","BJT","bipolar","NPN","PNP","emitor","baza","colector","alfa","beta","amplificare curent","IE=IC+IB","ICBo","efect de tranzistor","purtatori","dopat"],
+    content: "**Tranzistorul bipolar** este un dispozitiv activ cu 3 regiuni dopate diferit, având 3 terminale:\n- **Emitor (E)** – puternic dopat\n- **Bază (B)** – foarte subțire\n- **Colector (C)**\n\nConducția este asigurată de două tipuri de purtători (electroni și goluri) → denumirea de **bipolar**. Tipuri structurale: **PNP** și **NPN**.\n\n### Ecuația curenților\n\n$$I_E = I_C + I_B$$\n\n### Parametrii de amplificare\n\n$$I_C = \\alpha I_E + I_{CBo}, \\qquad \\alpha \\approx 0{,}97{-}0{,}99$$\n\n$$I_C = \\beta I_B + (1+\\beta)I_{CBo}, \\qquad \\beta = \\frac{\\alpha}{1-\\alpha} \\approx 10{-}100$$\n\nPrin **efectul de tranzistor**, majoritatea purtătorilor injectați din emitor difuzează prin baza subțire și sunt accelerați de câmpul colectorului."
   },
 
   {
@@ -821,15 +627,8 @@ $$I_C = \\alpha I_E + I_{CBo} \\approx \\beta I_B$$
     theme: "TEORIE",
     themeTitle: "Tranzistoare Bipolare (BJT)",
     title: "Regimurile de funcționare BJT – RAN, Saturație, Blocat, RAI",
-    tags: ["BJT", "regim activ normal", "RAN", "saturatie", "blocat", "regim activ invers", "RAI", "intrerupator", "amplificare", "UCEsat", "jonctiune", "polarizare"],
-    content: `| Regim | Joncțiunea EB | Joncțiunea BC | Comportament |
-|---|---|---|---|
-| **Activ Normal (RAN)** | Directă | Inversă | Amplificare: $I_C \\approx \\beta I_B$ |
-| **Saturație (RS)** | Directă | Directă | Întrerupător **închis**, $U_{CEsat} \\approx 0{,}1{-}0{,}2\\,V$ |
-| **Blocat (RB)** | Inversă | Inversă | Întrerupător **deschis**, $I_C \\approx 0$ |
-| **Activ Invers (RAI)** | Inversă | Directă | Neutilizat practic ($\\beta$ mic) |
-
-> **RAN** = zona de amplificare. **RS** și **RB** = comutație digitală (0/1).`
+    tags: ["BJT","regim activ normal","RAN","saturatie","RS","blocat","RB","regim activ invers","RAI","intreruptor inchis","intreruptor deschis","amplificare","UCEsat","jonctiune EB","jonctiune BC","polarizare directa","polarizare inversa"],
+    content: "Starea tranzistorului este determinată de polarizarea celor două joncțiuni:\n\n| Regim | Jonc. EB | Jonc. BC | Comportament |\n|---|---|---|---|\n| **Activ Normal (RAN)** | Directă | Inversă | Amplificare: $I_C \\approx \\beta I_B$ |\n| **Saturație (RS)** | Directă | Directă | Întrerupător **închis**, $U_{CEsat} \\approx 0{,}1{-}0{,}2\\,V$ |\n| **Blocat (RB)** | Inversă | Inversă | Întrerupător **deschis**, $I_C \\approx 0$ |\n| **Activ Invers (RAI)** | Inversă | Directă | Neutilizat practic ($\\beta$ extrem de mic) |\n\n> **RAN** = zona de amplificare. **RS** și **RB** = comutație digitală (0/1).\n\nÎn **Regimul de Saturație**, curentul este limitat doar de circuitul extern; tensiunea $U_{CEsat}$ este foarte mică.\n\nÎn **Regimul Blocat**, prin tranzistor circulă doar un curent rezidual extrem de mic."
   },
 
   {
@@ -838,24 +637,8 @@ $$I_C = \\alpha I_E + I_{CBo} \\approx \\beta I_B$$
     theme: "TEORIE",
     themeTitle: "Tranzistoare Bipolare (BJT)",
     title: "Polarizare BJT – PSF, dreapta de sarcină, stabilizare termică cu RE",
-    tags: ["BJT", "PSF", "punct static", "dreapta de sarcina", "polarizare", "R1 R2", "RC", "RE", "stabilizare termica", "ambalare termica", "ICBo", "divizor tensiune baza"],
-    content: `### Polarizarea cu 4 rezistoare ($R_1, R_2, R_C, R_E$)
-
-$R_1$ și $R_2$ formează un **divizor de tensiune** care fixează $V_B$ stabil.
-
-### Dreapta de sarcină DC
-
-$$I_C = -\\frac{U_{CE}}{R_C + R_E} + \\frac{E_C}{R_C + R_E}$$
-
-PSF (Punctul Static de Funcționare) = intersecția dreptei de sarcină cu caracteristica $I_C(U_{CE})$.
-
-### Problema ambalării termice
-
-Temperatură ↑ → $I_{CBo}$ ↑ → $I_C$ ↑ → disipație ↑ → temperatură ↑ … (buclă pozitivă)
-
-### Stabilizarea termică cu $R_E$
-
-Dacă $I_E$ crește → $I_E R_E$ crește → $U_{BE} = V_B - I_E R_E$ scade → $I_C$ scade. **Reacție negativă.**`
+    tags: ["BJT","PSF","punct static de functionare","dreapta de sarcina","polarizare","R1 R2 RC RE","stabilizare termica","ambalare termica","ICBo","divizor tensiune baza","VB","UBE","reactie negativa","temperatura"],
+    content: "### Polarizarea cu 4 rezistoare ($R_1, R_2, R_C, R_E$)\n\n$R_1$ și $R_2$ formează un **divizor de tensiune** care fixează potențialul bazei $V_B$ stabil față de variații.\n\n### Dreapta de sarcină DC\n\n$$I_C = -\\frac{U_{CE}}{R_C + R_E} + \\frac{E_C}{R_C + R_E}$$\n\n**PSF (Punctul Static de Funcționare)** = intersecția dreptei de sarcină cu caracteristica $I_C(U_{CE})$.\n\n### Problema ambalării termice\n\nTemperatură ↑ → $I_{CBo}$ ↑ → $I_C$ ↑ → disipație ↑ → temperatură ↑ (buclă pozitivă — distructivă)\n\n### Stabilizarea termică cu $R_E$ (reacție negativă)\n\nDacă $I_E$ ($\\approx I_C$) crește → căderea $I_E R_E$ crește → $U_{BE} = V_B - I_E R_E$ scade → $I_C$ scade. Compensare automată."
   },
 
   {
@@ -863,24 +646,18 @@ Dacă $I_E$ crește → $I_E R_E$ crește → $U_{BE} = V_B - I_E R_E$ scade →
     type: "theory",
     theme: "TEORIE",
     themeTitle: "Tranzistoare Bipolare (BJT)",
-    title: "Parametrii hibrizi BJT (h11, h12, h21, h22) și dispozitive multijoncțiune",
-    tags: ["BJT", "parametri hibrizi", "h11", "h12", "h21", "h22", "semnal mic", "emitor comun", "EC", "cuadripol", "tiristor", "SCR", "triac", "fototranzistor", "beta ac"],
-    content: `### Modelul cu parametri hibrizi (Emitor Comun)
+    title: "Parametrii hibrizi h – model semnal mic (Emitor Comun)",
+    tags: ["BJT","parametri hibrizi","h11","h12","h21","h22","semnal mic","emitor comun","EC","cuadripol","impedanta intrare","transfer tensiune","amplificare dinamica","admitanta iesire","beta ac","model liniar"],
+    content: "Pentru semnale mici (comportament liniar), tranzistorul este modelat ca un **cuadripol**. Parametrii hibrizi pentru **Emitor Comun**:\n\n$$\\Delta u_{be} = h_{11}\\,\\Delta i_b + h_{12}\\,\\Delta u_{ce}$$\n$$\\Delta i_c = h_{21}\\,\\Delta i_b + h_{22}\\,\\Delta u_{ce}$$\n\n| Parametru | Semnificație | Valoare tipică |\n|---|---|---|\n| $h_{11}$ | Impedanța de intrare | sute $\\Omega$ – $k\\Omega$ |\n| $h_{12}$ | Factorul de transfer invers în tensiune | $10^{-3}{-}10^{-4}$ |\n| $h_{21}$ | Amplificare dinamică în curent ($\\beta_{ac}$), ieșire în scurtcircuit | 10–100 |\n| $h_{22}$ | Admitanța de ieșire cu intrarea în gol | $\\mu S$ |"
+  },
 
-$$\\Delta u_{be} = h_{11}\\,\\Delta i_b + h_{12}\\,\\Delta u_{ce}$$
-$$\\Delta i_c = h_{21}\\,\\Delta i_b + h_{22}\\,\\Delta u_{ce}$$
-
-| Parametru | Semnificație | Valoare tipică |
-|---|---|---|
-| $h_{11}$ | Impedanța de intrare | sute $\\Omega$ – $k\\Omega$ |
-| $h_{12}$ | Transfer invers în tensiune | $10^{-3}{-}10^{-4}$ |
-| $h_{21}$ | Amplificare în curent ($\\beta_{ac}$) | 10–100 |
-| $h_{22}$ | Admitanță de ieșire | $\\mu S$ |
-
-### Dispozitive multijoncțiune
-
-- **Tiristor (SCR)** – structură p-n-p-n; se deschide cu curent pe Poartă; rămâne deschis cât $I > I_{menținere}$.
-- **Triac** – 2 tiristoare antiparalel; controlează curentul în **ambele** direcții (CA).
-- **Fototranzistor** – lumina generează perechi e⁻–gol pe joncțiunea EB; curentul este amplificat cu $\\beta$.`
+  {
+    id: 35,
+    type: "theory",
+    theme: "TEORIE",
+    themeTitle: "Tranzistoare Bipolare (BJT)",
+    title: "Dispozitive multijoncțiune – Tiristor (SCR), Triac, Fototranzistor",
+    tags: ["tiristor","SCR","triac","fototranzistor","pnpn","3 jonctiuni","anod","catod","poarta","curent de mentinere","curent alternativ","CA","antiparalel","fotoelectric","comanda","strapungere"],
+    content: "### Tiristorul (SCR)\n\nDispozitiv **p-n-p-n** (3 joncțiuni), văzut ca un ansamblu de 2 tranzistoare complementare (PNP și NPN) interconectate. Terminale: **Anod**, **Catod**, **Poartă**.\n\nDacă pe Poartă se aplică un curent de comandă, tensiunea necesară intrării în conducție scade dramatic. Tiristorul rămâne deschis (conduce) cât timp curentul prin el nu scade sub o valoare minimă de **menținere**.\n\n### Triacul\n\nEchivalent cu **două tiristoare conectate antiparalel**. Conceput pentru controlul curentului electric în **ambele direcții** (ambele alternanțe) în rețele de curent alternativ.\n\n### Fototranzistorul\n\nTranzistor a cărui joncțiune emitor-bază este expusă luminii. Fotonii absorbți generează goluri și electroni (**efect fotoelectric intern**). Curentul rezultat este amplificat de câștigul $\\beta$ al tranzistorului."
   }
 ];
