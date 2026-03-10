@@ -283,7 +283,21 @@ async function toggleFullscreen() {
 }
 
 // ── Events ─────────────────────────────────────────────────────────
-document.getElementById('search').addEventListener('input', e => {
+const searchEl = document.getElementById('search');
+
+// Android cover-screen keyboard fix:
+// The input starts readonly so Samsung Internet doesn't suppress the keyboard.
+// On touchstart we drop readonly and force focus, which triggers the IME.
+searchEl.addEventListener('touchstart', function () {
+  this.removeAttribute('readonly');
+  this.focus();
+}, { passive: true });
+
+searchEl.addEventListener('focus', function () {
+  this.removeAttribute('readonly');
+});
+
+searchEl.addEventListener('input', e => {
   query = e.target.value;
   render();
 });
