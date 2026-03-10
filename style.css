@@ -1,0 +1,515 @@
+:root {
+  --bg: #0f1117;
+  --surface: #1a1d27;
+  --surface2: #242736;
+  --border: #2e3247;
+  --accent: #6c63ff;
+  --accent2: #4ade80;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --problem: #3b82f6;
+  --theory: #8b5cf6;
+  --theme1: #f59e0b;
+  --theme2: #10b981;
+  --theme3: #3b82f6;
+  --theme4: #ef4444;
+  --theme5: #ec4899;
+  --theory-color: #8b5cf6;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+/* ── HEADER ── */
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 1.2rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header-top {
+  align-items: center;
+  display: flex;
+  gap: 0.65rem;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+}
+
+.header-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.03em;
+  margin-bottom: 0;
+}
+
+.header-title span { color: var(--text-muted); font-weight: 400; }
+
+.header-controls {
+  display: flex;
+  flex-shrink: 0;
+  gap: 0.5rem;
+}
+
+.icon-btn {
+  align-items: center;
+  background: var(--surface2);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  height: 2rem;
+  justify-content: center;
+  transition: all 0.2s;
+  width: 2rem;
+}
+
+.icon-btn:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.icon-btn:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.35);
+  outline: none;
+}
+
+.icon-btn[hidden] { display: none; }
+
+/* ── SEARCH BOX ── */
+.search-wrap {
+  position: relative;
+}
+
+.search-wrap svg {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+#search {
+  width: 100%;
+  background: var(--surface2);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 1.05rem;
+  padding: 0.75rem 1rem 0.75rem 2.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#search::placeholder { color: var(--text-muted); }
+#search:focus { border-color: var(--accent); }
+
+/* ── FILTER BAR ── */
+.filters {
+  max-width: 900px;
+  margin: 0.9rem auto 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0 1.5rem;
+}
+
+.chip {
+  background: var(--surface2);
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.85rem;
+  transition: all 0.15s;
+  user-select: none;
+}
+
+.chip:hover { border-color: var(--accent); color: var(--text); }
+
+.chip.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(108,99,255,0.12);
+}
+
+/* ── MAIN ── */
+main {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.results-info {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+/* ── CARDS ── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 0.9rem;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.card:hover { border-color: #4a5070; }
+
+.card-header {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: 0.8rem;
+  padding: 0.9rem 1.1rem;
+}
+
+.card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.badge {
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.55rem;
+  text-transform: uppercase;
+}
+
+.badge-problem { background: rgba(59,130,246,0.18); color: #60a5fa; }
+.badge-theory  { background: rgba(139,92,246,0.18); color: #a78bfa; }
+.badge-t1 { background: rgba(245,158,11,0.15); color: #fbbf24; }
+.badge-t2 { background: rgba(16,185,129,0.15); color: #34d399; }
+.badge-t3 { background: rgba(59,130,246,0.15); color: #60a5fa; }
+.badge-t4 { background: rgba(239,68,68,0.15); color: #f87171; }
+.badge-t5 { background: rgba(236,72,153,0.15); color: #f472b6; }
+.badge-teorie { background: rgba(139,92,246,0.15); color: #a78bfa; }
+
+.card-title {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.card-title-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.card-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-title .highlight, .card-body .highlight {
+  background: rgba(108,99,255,0.3);
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+.card-chevron {
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: transform 0.25s;
+}
+
+.card.open .card-chevron { transform: rotate(180deg); }
+
+/* ── CARD BODY ── */
+.card-body {
+  background: var(--surface2);
+  border-top: 1px solid var(--border);
+  display: none;
+  overflow: hidden;
+  padding: 1.2rem 1.4rem;
+}
+
+.card.open .card-body { display: block; }
+
+/* ── MARKDOWN RENDERED ── */
+.card-body h1, .card-body h2, .card-body h3 {
+  color: var(--accent);
+  font-size: 0.95rem;
+  margin: 1rem 0 0.4rem;
+}
+
+.card-body p { margin: 0.5rem 0; line-height: 1.7; }
+
+.card-body ul, .card-body ol {
+  margin: 0.5rem 0 0.5rem 1.5rem;
+  line-height: 1.7;
+}
+
+.card-body blockquote {
+  border-left: 3px solid var(--accent);
+  color: var(--text-muted);
+  margin: 0.6rem 0;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.card-body a { color: var(--accent); }
+
+.card-body strong { color: #fff; }
+
+.card-body code {
+  background: rgba(255,255,255,0.08);
+  border-radius: 4px;
+  font-family: 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 0.85em;
+  padding: 0.1em 0.4em;
+}
+
+.card-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0.9rem 0;
+}
+
+.card-body table {
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  margin: 0.7rem 0;
+  width: 100%;
+}
+
+.card-body th {
+  background: rgba(108,99,255,0.15);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.4rem 0.7rem;
+  text-align: left;
+}
+
+.card-body td {
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.7rem;
+}
+
+.card-body img {
+  background: #ffffff;
+  border-radius: 8px;
+  display: block;
+  margin: 0.7rem auto;
+  max-width: 100%;
+  padding: 0.75rem 1rem;
+}
+
+/* KaTeX display-mode: scroll horizontally so equations never overflow the card */
+.card-body .katex-display {
+  margin: 0.6rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Inline KaTeX that is too wide also scrolls */
+.card-body .katex {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  vertical-align: middle;
+}
+
+/* ── EMPTY STATE ── */
+.empty {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.empty strong { color: var(--text); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .card-title { font-size: 0.88rem; }
+  #search { font-size: 0.95rem; }
+}
+
+/* ── Cover-screen / tiny phone (≤ 375 px wide, e.g. Z Flip 6 outer display) ── */
+@media (max-width: 375px) {
+  /* Collapse to a single-row header: [search box] [fullscreen btn] */
+  header {
+    padding: 0.4rem 0.6rem;
+  }
+
+  .header-inner {
+    align-items: center;
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  /* Unwrap .header-top so its children join the flex row */
+  .header-top {
+    display: contents;
+  }
+
+  /* Hide the title text entirely */
+  .header-title {
+    display: none;
+  }
+
+  /* Search fills remaining space, fullscreen btn comes after */
+  .search-wrap {
+    flex: 1;
+    order: 1;
+  }
+
+  .header-controls {
+    flex-shrink: 0;
+    order: 2;
+  }
+
+  #search {
+    border-radius: 8px;
+    font-size: 0.88rem;
+    padding: 0.48rem 0.65rem 0.48rem 2.1rem;
+  }
+
+  .search-wrap svg {
+    left: 0.6rem;
+    width: 14px;
+    height: 14px;
+  }
+
+  /* ── Filter strip ── */
+  .filters {
+    flex-wrap: nowrap;
+    gap: 0.3rem;
+    margin-top: 0.3rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    padding: 0 0.6rem 0.3rem;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filters::-webkit-scrollbar { display: none; }
+
+  .chip {
+    flex: 0 0 auto;
+    font-size: 0.68rem;
+    padding: 0.2rem 0.5rem;
+    white-space: nowrap;
+  }
+
+  /* ── Main ── */
+  main {
+    margin: 0.45rem auto;
+    padding: 0 0.6rem 1rem;
+  }
+
+  .results-info {
+    font-size: 0.7rem;
+    margin-bottom: 0.35rem;
+  }
+
+  /* ── Cards: ultra-compact one-line headers ── */
+  .card {
+    border-radius: 8px;
+    margin-bottom: 0.4rem;
+  }
+
+  .card-header {
+    gap: 0.4rem;
+    padding: 0.42rem 0.55rem;
+  }
+
+  .card-badges {
+    gap: 0.18rem;
+  }
+
+  /* Only show the type badge (Problemă / Teorie); hide the TEMA badge */
+  .card-badges .badge:not(:first-child) {
+    display: none;
+  }
+
+  .badge {
+    font-size: 0.58rem;
+    padding: 0.13rem 0.36rem;
+  }
+
+  .card-title-text {
+    font-size: 0.78rem;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .card-subtitle {
+    display: none;
+  }
+
+  .card-chevron {
+    width: 13px;
+    height: 13px;
+  }
+
+  /* ── Card body ── */
+  .card-body {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    padding: 0.6rem 0.68rem;
+  }
+
+  .card-body h1, .card-body h2, .card-body h3 {
+    font-size: 0.86rem;
+    margin: 0.65rem 0 0.28rem;
+  }
+
+  .card-body p,
+  .card-body ul,
+  .card-body ol {
+    line-height: 1.5;
+    margin: 0.35rem 0;
+  }
+
+  .card-body ul, .card-body ol {
+    margin-left: 1.1rem;
+  }
+
+  .card-body table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .card-body img {
+    border-radius: 6px;
+    padding: 0.4rem;
+  }
+}
