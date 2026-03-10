@@ -58,15 +58,56 @@
       margin: 0 auto;
     }
 
+    .header-top {
+      align-items: center;
+      display: flex;
+      gap: 0.65rem;
+      justify-content: space-between;
+      margin-bottom: 0.9rem;
+    }
+
     .header-title {
       font-size: 1.1rem;
       font-weight: 700;
       color: var(--accent);
       letter-spacing: 0.03em;
-      margin-bottom: 0.9rem;
+      margin-bottom: 0;
     }
 
     .header-title span { color: var(--text-muted); font-weight: 400; }
+
+    .header-controls {
+      display: flex;
+      flex-shrink: 0;
+      gap: 0.5rem;
+    }
+
+    .icon-btn {
+      align-items: center;
+      background: var(--surface2);
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: inline-flex;
+      height: 2rem;
+      justify-content: center;
+      transition: all 0.2s;
+      width: 2rem;
+    }
+
+    .icon-btn:hover {
+      border-color: var(--accent);
+      color: var(--text);
+    }
+
+    .icon-btn:focus-visible {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.35);
+      outline: none;
+    }
+
+    .icon-btn[hidden] { display: none; }
 
     /* ── SEARCH BOX ── */
     .search-wrap {
@@ -317,13 +358,140 @@
       .card-title { font-size: 0.88rem; }
       #search { font-size: 0.95rem; }
     }
+
+    @media (max-width: 360px) {
+      header {
+        padding: calc(0.7rem + env(safe-area-inset-top)) 0.65rem 0.65rem;
+      }
+
+      main {
+        margin: 0.7rem auto;
+        padding: 0 0.65rem calc(1.4rem + env(safe-area-inset-bottom));
+      }
+
+      .header-top {
+        margin-bottom: 0.6rem;
+      }
+
+      .header-title {
+        font-size: 0.9rem;
+        line-height: 1.2;
+      }
+
+      .header-title span {
+        display: none;
+      }
+
+      #search {
+        border-radius: 9px;
+        font-size: 0.9rem;
+        padding: 0.62rem 0.7rem 0.62rem 2.35rem;
+      }
+
+      .search-wrap svg {
+        left: 0.78rem;
+      }
+
+      .filters {
+        flex-wrap: nowrap;
+        gap: 0.35rem;
+        margin-top: 0.6rem;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        padding: 0 0.65rem 0.2rem;
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .chip {
+        flex: 0 0 auto;
+        font-size: 0.72rem;
+        padding: 0.25rem 0.6rem;
+        white-space: nowrap;
+      }
+
+      .results-info {
+        font-size: 0.74rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .card {
+        border-radius: 10px;
+        margin-bottom: 0.6rem;
+      }
+
+      .card-header {
+        gap: 0.55rem;
+        padding: 0.65rem 0.68rem;
+      }
+
+      .card-badges {
+        gap: 0.25rem;
+      }
+
+      .badge {
+        font-size: 0.62rem;
+        padding: 0.17rem 0.4rem;
+      }
+
+      .card-title-text {
+        font-size: 0.82rem;
+        line-height: 1.22;
+      }
+
+      .card-subtitle {
+        display: none;
+      }
+
+      .card-body {
+        font-size: 0.86rem;
+        line-height: 1.55;
+        padding: 0.72rem 0.75rem;
+      }
+
+      .card-body p,
+      .card-body ul,
+      .card-body ol {
+        line-height: 1.55;
+      }
+
+      .card-body table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 100%;
+      }
+
+      .card-body img {
+        border-radius: 6px;
+        padding: 0.5rem;
+      }
+    }
   </style>
 </head>
 <body>
 
 <header>
   <div class="header-inner">
-    <div class="header-title">CDE <span>– Căutare Rapidă Probleme &amp; Teorie</span></div>
+    <div class="header-top">
+      <div class="header-title">CDE <span>– Căutare Rapidă Probleme &amp; Teorie</span></div>
+      <div class="header-controls">
+        <button id="fullscreenBtn" class="icon-btn" type="button" aria-label="Comută ecran complet" title="Ecran complet" hidden>
+          <svg id="fullscreenIconEnter" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="8 3 3 3 3 8"></polyline>
+            <polyline points="16 3 21 3 21 8"></polyline>
+            <polyline points="8 21 3 21 3 16"></polyline>
+            <polyline points="16 21 21 21 21 16"></polyline>
+          </svg>
+          <svg id="fullscreenIconExit" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" hidden>
+            <polyline points="9 3 9 9 3 9"></polyline>
+            <polyline points="15 3 15 9 21 9"></polyline>
+            <polyline points="9 21 9 15 3 15"></polyline>
+            <polyline points="15 21 15 15 21 15"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
     <div class="search-wrap">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
@@ -357,6 +525,7 @@
 let query = '';
 let activeFilter = 'all';
 let mathReady = false;
+let fullscreenEnabled = false;
 
 // ── KaTeX auto-render ──────────────────────────────────────────────
 function renderMathWhenReady() {
@@ -606,6 +775,35 @@ function toggleCard(id) {
   }
 }
 
+function isFullscreenActive() {
+  return !!document.fullscreenElement;
+}
+
+function updateFullscreenButton() {
+  const enterIcon = document.getElementById('fullscreenIconEnter');
+  const exitIcon = document.getElementById('fullscreenIconExit');
+  const btn = document.getElementById('fullscreenBtn');
+  if (!btn || !enterIcon || !exitIcon || !fullscreenEnabled) return;
+
+  const active = isFullscreenActive();
+  enterIcon.hidden = active;
+  exitIcon.hidden = !active;
+  btn.setAttribute('aria-label', active ? 'Ieșire din ecran complet' : 'Intră în ecran complet');
+  btn.title = active ? 'Ieșire ecran complet' : 'Ecran complet';
+}
+
+async function toggleFullscreen() {
+  try {
+    if (isFullscreenActive()) {
+      await document.exitFullscreen();
+    } else {
+      await document.documentElement.requestFullscreen();
+    }
+  } catch (_) {
+    // Ignore if the browser blocks fullscreen in current context.
+  }
+}
+
 // ── Events ─────────────────────────────────────────────────────────
 document.getElementById('search').addEventListener('input', e => {
   query = e.target.value;
@@ -620,6 +818,15 @@ document.getElementById('filters').addEventListener('click', e => {
   activeFilter = chip.dataset.filter;
   render();
 });
+
+const fsBtn = document.getElementById('fullscreenBtn');
+fullscreenEnabled = !!(document.fullscreenEnabled && document.documentElement.requestFullscreen);
+if (fullscreenEnabled && fsBtn) {
+  fsBtn.hidden = false;
+  fsBtn.addEventListener('click', toggleFullscreen);
+  document.addEventListener('fullscreenchange', updateFullscreenButton);
+  updateFullscreenButton();
+}
 
 // ── Init ───────────────────────────────────────────────────────────
 render();
